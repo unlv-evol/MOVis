@@ -3,6 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Conference](https://img.shields.io/badge/FSE-2026-blue.svg)](#)
 [![Artifact Type](https://img.shields.io/badge/Artifact-Tool%20Demo-orange.svg)](#)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18356553.svg)](https://doi.org/10.5281/zenodo.18356553)
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://doi.org/10.5281/zenodo.18356553/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://doi.org/10.5281/zenodo.18356553)
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648/)](https://archive.softwareheritage.org/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648;origin=https://doi.org/10.5281/zenodo.18356553;visit=swh:1:snp:27266f32ac9c8d3edb2c71f0a40ec42c5175e7c5;anchor=swh:1:rel:1c8af992cf5f2031d820aa4ed18adeaf7070ae50;path=/unlv-evol-MOVis-1f4ba0f/)
 
 This repository contains the **replication package** for the FSE 2026 Tool Demonstration paper:
 
