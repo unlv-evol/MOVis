@@ -1,5 +1,6 @@
 services:
   dev-container-movis:
+    # platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile
