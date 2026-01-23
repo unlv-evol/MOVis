@@ -21,50 +21,71 @@ ENV HOME=/config
 
 ##### INSTALL PACKAGES #####
 
-# Install additional tools: Git and OpenJDK 11
-RUN apt-get update && apt-get install -y \
-    nano \
-	htop \
-	dos2unix \
-    git \
-    openjdk-11-jdk \
-	maven \
-	python3.12-full \
+# 1) System deps + add repo for Python 3.12 (deadsnakes) + install tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    software-properties-common \
+    ca-certificates \
+    curl \
+    gnupg \
     wget \
-    unzip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    unzip \
+    git \
+    nano \
+    htop \
+    dos2unix \
+    npm \
+    libgl1-mesa-dev \
+    mesa-common-dev \
+    && add-apt-repository -y ppa:deadsnakes/ppa \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+    python3.12 \
+    python3.12-venv \
+    python3.12-dev \
+    python3-pip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# 2) Make Python 3.12 the default "python" and "python3"
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 312 \
+    && update-alternatives --install /usr/bin/python  python  /usr/bin/python3.12 312
+
+# 3) Install pip for Python 3.12 (reliable across Ubuntu variants)
+# RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
+
+# (Optional but recommended) verify
+RUN python3 --version && python --version && pip --version
 
 
-RUN java -XshowSettings:properties -version
-# Find the actual JAVA_HOME path dynamically
-RUN echo "JAVA_HOME should be: $(dirname $(dirname $(readlink -f $(which java))))"
+# RUN java -XshowSettings:properties -version
+# # Find the actual JAVA_HOME path dynamically
+# RUN echo "JAVA_HOME should be: $(dirname $(dirname $(readlink -f $(which java))))"
 
-# Java
-RUN set -eux; \
-    JAVA_HOME_REAL="$(dirname "$(dirname "$(readlink -f "$(which javac)")")")"; \
-    echo "Detected JAVA_HOME: $JAVA_HOME_REAL"; \
-    ln -sfn "$JAVA_HOME_REAL" /usr/lib/jvm/default-java; \
-    echo "export JAVA_HOME=/usr/lib/jvm/default-java" > /etc/profile.d/java_home.sh
+# # Java
+# RUN set -eux; \
+#     JAVA_HOME_REAL="$(dirname "$(dirname "$(readlink -f "$(which javac)")")")"; \
+#     echo "Detected JAVA_HOME: $JAVA_HOME_REAL"; \
+#     ln -sfn "$JAVA_HOME_REAL" /usr/lib/jvm/default-java; \
+#     echo "export JAVA_HOME=/usr/lib/jvm/default-java" > /etc/profile.d/java_home.sh
 
-ENV JAVA_HOME=/usr/lib/jvm/default-java
-ENV PATH="${JAVA_HOME}/bin:${PATH}"
+# ENV JAVA_HOME=/usr/lib/jvm/default-java
+# ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 # ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
 # ENV PATH=$JAVA_HOME/bin:$PATH
 	
 # Prepare Git folder:
-RUN mkdir -p $HOME/git
+# RUN mkdir -p $HOME/git
 
-##### MOVis #####
+# ##### MOVis #####
 
-# Clone repository: MOvis
-RUN git clone https://github.com/unlv-evol/MOVis.git $HOME/git/MOVis
+# # Clone repository: MOvis
+# RUN git clone https://github.com/unlv-evol/MOVis.git $HOME/git/MOVis
 
-# Setup Git identity for MOvis
-RUN git config --global user.email "you@example.com"
-RUN git config --global user.name "Your Name"
-RUN git config --global init.defaultBranch main
+# # Setup Git identity for MOvis
+# RUN git config --global user.email "you@example.com"
+# RUN git config --global user.name "Your Name"
+# RUN git config --global init.defaultBranch main
 
 
 
@@ -76,6 +97,16 @@ RUN rm -rf /home/kasm-default-profile/Desktop
 # Ensure the Desktop directory exists
 RUN mkdir -p $HOME/Desktop
 RUN mkdir -p $HOME/MOVis
+
+# Download and extract MOVis release
+RUN wget -O /tmp/MOVis-Linux.zip \
+    https://raw.githubusercontent.com/unlv-evol/MOVis/blob/main/release/MOVis-Linux.zip && \
+    unzip /tmp/MOVis-Linux.zip -d $HOME/MOVis/ && \
+    rm /tmp/MOVis-Linux.zip
+
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r $HOME/MOVis/Pareco/requirements.txt
 
 RUN mkdir -p $HOME/.config/my-scripts
 RUN mkdir -p $HOME/.config/autostart
