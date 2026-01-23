@@ -65,7 +65,7 @@ MOVis/
 ├── include/                # Shared include files and third-party headers
 ├── logs/                   # Runtime and analysis logs
 ├── scripts/                # Helper scripts (build, analysis, data preparation)
-├── compiled/               # Compiled binaries or intermediate build artifacts
+├── release/                # Compiled binaries or intermediate build artifacts
 ├── docker/                 # Dockerfiles and container configuration
 └── .gitignore              # Git ignore rules
 ```
@@ -111,7 +111,7 @@ MOVis relies on the GitHub API for extracting pull request patches through **PaR
 
 ## Installation and Running MOvis
 
-This section will get you through installation and execution of the RePatch tool. **If you want to quickly reproduce the results in the paper without running the tool, kindly refer to "[#reproducing-the-paper-demonstration](#reproducing-the-paper-demonstratio)" section**.
+This section will get you through installation and execution of the RePatch tool. **If you want to quickly reproduce the results in the paper without running the tool, kindly refer to "[reproducing-the-paper-demonstration](#reproducing-the-paper-demonstratio)" section**.
 
 You can run the **RePatch** tool using one of two approaches:
 
