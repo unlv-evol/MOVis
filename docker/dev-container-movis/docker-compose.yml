@@ -11,7 +11,7 @@ services:
     security_opt:
       - seccomp=unconfined
     volumes:
-      - dev_container_data_repatch:/config
+      - dev_container_data_movis:/config
     environment:
       - PUID=1000
       - PGID=1000
