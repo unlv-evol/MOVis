@@ -110,6 +110,7 @@ RUN echo "Top-level contents of /config/MOVis:" && ls -lah $HOME/MOVis/
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --ignore-installed -r $HOME/MOVis/MOVis-Linux/Desktop_Qt_6_8_3-Release/Pareco/requirements.txt --break-system-packages
+RUN npm install --prefix $HOME/MOVis/MOVis-Linux/Desktop_Qt_6_8_3-Release/Pareco/
 
 RUN mkdir -p $HOME/.config/my-scripts
 RUN mkdir -p $HOME/.config/autostart
