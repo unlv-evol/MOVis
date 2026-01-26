@@ -1,201 +1,182 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# -----------------------------
-# Config (edit if needed)
-# -----------------------------
+# -------- Config (edit if needed) ----------
 APP_NAME="MOVis"
-BUILD_DIR="../build/Desktop_Qt_6_8_3-Release"   # where the built binary is
-DEPLOY_DIR="./MOVis-Release"                   # output folder
+BUILD_DIR="../build/Desktop_Qt_6_8_3-Release"
+OUT_DIR="./MOVis-Release"
 
 QT_ROOT="$HOME/Qt/6.8.3/gcc_64"
 QT_LIB_DIR="$QT_ROOT/lib"
 QT_PLUGIN_DIR="$QT_ROOT/plugins"
 
-# Your app runtime folders (live in repo root; copied next to executable)
-SRC_ROOT=".."   # scripts/ is one level under repo root
+# These are runtime folders your app needs next to the executable
 RUNTIME_ITEMS=( "Pareco" "assets" "include" "logs" )
 
-# -----------------------------
-# Helpers
-# -----------------------------
-need() { command -v "$1" >/dev/null 2>&1 || { echo "Error: Missing command: $1"; exit 1; }; }
+# ------------------------------------------
+die(){ echo "Error: $*" >&2; exit 1; }
+need(){ command -v "$1" >/dev/null 2>&1 || die "Missing command: $1"; }
 
 need rsync
 need ldd
-need awk
 need patchelf
-need readlink
-need mkdir
-need cp
-need rm
+need readelf
+need find
+need awk
+need sort
 
-if [[ ! -f "$BUILD_DIR/$APP_NAME" ]]; then
-  echo "Error: Application executable not found: $BUILD_DIR/$APP_NAME"
-  exit 1
-fi
-
-if [[ ! -d "$QT_LIB_DIR" ]]; then
-  echo "Error: Qt lib dir not found: $QT_LIB_DIR"
-  exit 1
-fi
-
-if [[ ! -d "$QT_PLUGIN_DIR" ]]; then
-  echo "Error: Qt plugin dir not found: $QT_PLUGIN_DIR"
-  exit 1
-fi
+[[ -f "$BUILD_DIR/$APP_NAME" ]] || die "Executable not found: $BUILD_DIR/$APP_NAME"
+[[ -d "$QT_LIB_DIR" ]] || die "Qt lib dir not found: $QT_LIB_DIR"
+[[ -d "$QT_PLUGIN_DIR" ]] || die "Qt plugin dir not found: $QT_PLUGIN_DIR"
 
 echo "== Deploying $APP_NAME"
-echo "Build:  $BUILD_DIR/$APP_NAME"
-echo "Deploy: $DEPLOY_DIR"
+echo "Build dir: $BUILD_DIR"
+echo "Output:    $OUT_DIR"
 
-# -----------------------------
-# Create deployment structure
-# -----------------------------
-rm -rf "$DEPLOY_DIR"
-mkdir -p "$DEPLOY_DIR"/{libs,plugins/platforms,plugins/imageformats}
+rm -rf "$OUT_DIR"
+mkdir -p "$OUT_DIR"/{libs,plugins}
 
-# -----------------------------
-# Copy executable
-# -----------------------------
-echo "== Copying executable"
-cp -L "$BUILD_DIR/$APP_NAME" "$DEPLOY_DIR/"
-chmod +x "$DEPLOY_DIR/$APP_NAME"
+# 1) Copy executable
+rsync -a "$BUILD_DIR/$APP_NAME" "$OUT_DIR/$APP_NAME"
+chmod +x "$OUT_DIR/$APP_NAME"
 
-# -----------------------------
-# Copy runtime folders
-# -----------------------------
-echo "== Copying runtime folders"
+# 2) Copy runtime folders/files (Pareco/assets/include/logs)
+echo "== Copying runtime items"
 for item in "${RUNTIME_ITEMS[@]}"; do
-  if [[ -d "$SRC_ROOT/$item" ]]; then
-    mkdir -p "$DEPLOY_DIR/$item"
-    rsync -a --delete "$SRC_ROOT/$item/" "$DEPLOY_DIR/$item/"
+  if [[ -e "$BUILD_DIR/$item" ]]; then
     echo "  + $item"
-  else
-    echo "  ! WARNING: $SRC_ROOT/$item not found"
-  fi
-done
-
-# -----------------------------
-# Copy libraries (with deps)
-# -----------------------------
-copy_library() {
-  local lib="$1"
-  [[ -f "$lib" ]] || return 0
-
-  # Dereference symlinks to copy the real file
-  local real
-  real="$(readlink -f "$lib" || true)"
-  [[ -n "$real" && -f "$real" ]] || real="$lib"
-
-  local base
-  base="$(basename "$lib")"
-  local realname
-  realname="$(basename "$real")"
-
-  # Copy real file (avoid duplicates)
-  if [[ ! -f "$DEPLOY_DIR/libs/$realname" ]]; then
-    cp -L "$real" "$DEPLOY_DIR/libs/"
-  fi
-
-  # Ensure the SONAME symlink exists (e.g. libQt6XcbQpa.so.6 -> libQt6XcbQpa.so.6.8.3)
-  ln -sf "$realname" "$DEPLOY_DIR/libs/$base" 2>/dev/null || true
-
-  # Copy direct dependencies (recursively via repeated calls from outer loops)
-  ldd "$real" | awk '/=> \// {print $3} /^\// {print $1}' | while read -r dep; do
-    [[ -f "$dep" ]] || continue
-    local dep_real dep_name
-    dep_real="$(readlink -f "$dep" || true)"
-    [[ -n "$dep_real" && -f "$dep_real" ]] || dep_real="$dep"
-    dep_name="$(basename "$dep_real")"
-    if [[ ! -f "$DEPLOY_DIR/libs/$dep_name" ]]; then
-      cp -L "$dep_real" "$DEPLOY_DIR/libs/"
+    if [[ -d "$BUILD_DIR/$item" ]]; then
+      mkdir -p "$OUT_DIR/$item"
+      rsync -a --delete "$BUILD_DIR/$item/" "$OUT_DIR/$item/"
+    else
+      rsync -a "$BUILD_DIR/$item" "$OUT_DIR/"
     fi
-  done
-}
-
-echo "== Copying app shared libs from ldd"
-ldd "$BUILD_DIR/$APP_NAME" | awk '/=> \// {print $3} /^\// {print $1}' | while read -r lib; do
-  copy_library "$lib"
-done
-
-echo "== Explicitly copying Qt libs (includes libQt6XcbQpa)"
-for lib in \
-  libQt6Core.so.6 \
-  libQt6Gui.so.6 \
-  libQt6Widgets.so.6 \
-  libQt6Network.so.6 \
-  libQt6Concurrent.so.6 \
-  libQt6XcbQpa.so.6
-do
-  if [[ -f "$QT_LIB_DIR/$lib" ]]; then
-    copy_library "$QT_LIB_DIR/$lib"
-    echo "  + $lib"
   else
-    echo "  ! WARNING: $QT_LIB_DIR/$lib not found"
+    echo "  ! WARNING: '$item' not found in $BUILD_DIR (check your .pro copy_third or paths)"
   fi
 done
 
-# -----------------------------
-# Copy Qt platform plugin (xcb) + imageformats
-# -----------------------------
-echo "== Copying Qt platform plugin (xcb)"
-QXCB="$QT_PLUGIN_DIR/platforms/libqxcb.so"
-if [[ ! -f "$QXCB" ]]; then
-  echo "Error: libqxcb.so not found at: $QXCB"
-  exit 1
-fi
-cp -L "$QXCB" "$DEPLOY_DIR/plugins/platforms/"
-copy_library "$QXCB"
-
-echo "== Copying Qt imageformats plugins"
-if compgen -G "$QT_PLUGIN_DIR/imageformats/*.so" > /dev/null; then
-  cp -L "$QT_PLUGIN_DIR/imageformats/"*.so "$DEPLOY_DIR/plugins/imageformats/" || true
-else
-  echo "  ! WARNING: no imageformat plugins found"
-fi
-
-# -----------------------------
-# RPATH: make executable/plugins find bundled libs
-# -----------------------------
-echo "== Setting RPATH"
-patchelf --set-rpath '$ORIGIN/libs' "$DEPLOY_DIR/$APP_NAME" || true
-patchelf --set-rpath '$ORIGIN/../../libs' "$DEPLOY_DIR/plugins/platforms/libqxcb.so" || true
-
-# -----------------------------
-# qt.conf: make ./MOVis find plugins without env vars (optional but recommended)
-# -----------------------------
-cat > "$DEPLOY_DIR/qt.conf" <<'EOF'
-[Paths]
-Plugins = plugins
+# If linuxdeployqt exists, prefer it (best distribution story)
+if command -v linuxdeployqt >/dev/null 2>&1; then
+  echo "== Using linuxdeployqt (preferred)"
+  # Create a minimal desktop file so linuxdeployqt is happy
+  cat > "$OUT_DIR/$APP_NAME.desktop" <<EOF
+[Desktop Entry]
+Type=Application
+Name=$APP_NAME
+Exec=$APP_NAME
+Icon=$APP_NAME
+Categories=Utility;
 EOF
 
-# -----------------------------
-# run.sh: wrapper to set env vars (recommended)
-# -----------------------------
-echo "== Writing run.sh"
-cat > "$DEPLOY_DIR/run.sh" <<'EOF'
+  # Provide a dummy icon if you don’t have one yet
+  mkdir -p "$OUT_DIR/icons"
+  : > "$OUT_DIR/$APP_NAME.png"
+
+  # linuxdeployqt expects to run in the AppDir root typically
+  pushd "$OUT_DIR" >/dev/null
+  linuxdeployqt "./$APP_NAME" -qmake="$QT_ROOT/bin/qmake" -no-translations -bundle-non-qt-libs || true
+  popd >/dev/null
+
+  echo
+  echo "Done (linuxdeployqt). Try:"
+  echo "  $OUT_DIR/$APP_NAME"
+  echo "or"
+  echo "  QT_QPA_PLATFORM=xcb $OUT_DIR/$APP_NAME"
+  exit 0
+fi
+
+echo "== linuxdeployqt not found -> manual bundle mode"
+
+# -------- Manual bundling below --------
+collect_deps() {
+  local bin="$1"
+  ldd "$bin" | awk '
+    $3 ~ /^\// {print $3}
+    $1 ~ /^\// {print $1}
+  ' | sort -u
+}
+
+copy_real_lib() {
+  local src="$1"
+  local dst_dir="$2"
+  local real
+  real="$(readlink -f "$src")" || return 0
+  [[ -f "$real" ]] || return 0
+  local realname base
+  realname="$(basename "$real")"
+  base="$(basename "$src")"
+  rsync -aL "$real" "$dst_dir/$realname"
+  ln -sf "$realname" "$dst_dir/$base"
+}
+
+# 3) Copy shared libs (closure: deps of deps)
+echo "== Copying shared library dependencies into libs/ (dereference symlinks)"
+declare -A seen=()
+queue=("$OUT_DIR/$APP_NAME")
+
+while ((${#queue[@]})); do
+  target="${queue[0]}"
+  queue=("${queue[@]:1}")
+
+  while IFS= read -r lib; do
+    [[ -z "$lib" ]] && continue
+    [[ -e "$lib" ]] || continue
+
+    real="$(readlink -f "$lib")" || continue
+    realname="$(basename "$real")"
+
+    if [[ -z "${seen[$realname]:-}" ]]; then
+      seen["$realname"]=1
+      copy_real_lib "$lib" "$OUT_DIR/libs"
+      echo "  + $(basename "$lib")"
+      queue+=("$OUT_DIR/libs/$realname")
+    fi
+  done < <(collect_deps "$target")
+done
+
+# 4) Copy ALL Qt plugins (don’t miss anything)
+echo "== Copying Qt plugins (entire tree)"
+rsync -aL --delete "$QT_PLUGIN_DIR/" "$OUT_DIR/plugins/"
+
+# 5) Set RPATH
+echo "== Setting RPATH"
+patchelf --force-rpath --set-rpath '$ORIGIN/libs' "$OUT_DIR/$APP_NAME"
+
+# Make plugins find libs too
+find "$OUT_DIR/plugins" -type f -name "*.so" -print0 | while IFS= read -r -d '' sofile; do
+  patchelf --force-rpath --set-rpath '$ORIGIN/../../libs' "$sofile" 2>/dev/null || true
+done
+
+# 6) Create run script (forces xcb by default)
+cat > "$OUT_DIR/run.sh" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 
-export LD_LIBRARY_PATH="$HERE/libs:${LD_LIBRARY_PATH:-}"
 export QT_PLUGIN_PATH="$HERE/plugins"
-export QT_QPA_PLATFORM_PLUGIN_PATH="$HERE/plugins/platforms"
+export LD_LIBRARY_PATH="$HERE/libs:${LD_LIBRARY_PATH:-}"
+
+# Force X11/xcb to avoid Wayland plugin load issues by default
 export QT_QPA_PLATFORM="${QT_QPA_PLATFORM:-xcb}"
 
 exec "$HERE/MOVis" "$@"
 EOF
-chmod +x "$DEPLOY_DIR/run.sh"
+chmod +x "$OUT_DIR/run.sh"
 
-# -----------------------------
-# Sanity checks
-# -----------------------------
-echo "== Sanity check: missing deps for libqxcb.so (should be none of Qt libs)"
-ldd "$DEPLOY_DIR/plugins/platforms/libqxcb.so" | grep "not found" || echo "  (none)"
+cp -L "$HOME/Qt/6.8.3/gcc_64/lib/libQt6XcbQpa.so.6.8.3" ./MOVis-Release/libs/
+ln -sf libQt6XcbQpa.so.6.8.3 ./MOVis-Release/libs/libQt6XcbQpa.so.6
 
-echo "== Done"
-echo "Run with: $DEPLOY_DIR/run.sh"
+
+echo "== Verify"
+echo "-- RPATH/RUNPATH:"
+readelf -d "$OUT_DIR/$APP_NAME" | grep -E 'RPATH|RUNPATH' || true
+echo "-- Missing libs:"
+ldd "$OUT_DIR/$APP_NAME" | awk '/not found/{print $1}' || true
+
 echo
-echo "NOTE: If you see an error about xcb-cursor0/libxcb-cursor0 on another machine,"
-echo "install: sudo apt install -y libxcb-cursor0"
+echo "Done (manual). Run with:"
+echo "  $OUT_DIR/run.sh"
+echo
+echo "If it fails on xcb plugin deps, run:"
+echo "  ldd $OUT_DIR/plugins/platforms/libqxcb.so | grep 'not found' || true"

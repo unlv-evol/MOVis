@@ -80,7 +80,12 @@ class similarityInterface: public QWidget{
         QWidget* root;               // container with VBox (GroupBox on top + splitter below)
         QSplitter* splitter;
 
+        QHash<int, QColor> leftLineCheck;
         QHash<int, QColor> rightLineCheck;
+        int startingCheck = 0;
+        QString lastCheck = "0";
+        QString lastCheckName = "";
+        int addedLines = 0;
 
         // Top controls (single set)
         QGroupBox* topGroup;
@@ -92,6 +97,7 @@ class similarityInterface: public QWidget{
         // LEFT panel (selector + editor)
         QWidget* leftPanel;
         QComboBox* leftFileSelector;
+        QLabel* leftFileLabel;
         LineNumberHelpers* leftEdit;
         QVector<HunkRange> leftHunkRanges;
         QHash<QString, int> leftHunkIndexByFileName;

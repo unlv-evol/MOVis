@@ -74,6 +74,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     // connect button
     connect(ui->divDateButton, &QPushButton::clicked, this, &MainWindow::onDivergenceCheck);
+
+    // connect button
+    connect(ui->hideButton, &QPushButton::clicked, this, [this](){
+        ui->plainTextEdit->setVisible(!ui->plainTextEdit->isVisible());
+        if(ui->plainTextEdit->isVisible()){
+            ui->hideButton->setText("Hide");
+        }else{
+            ui->hideButton->setText("Show");
+        }
+    });
 }
 
 MainWindow::~MainWindow()

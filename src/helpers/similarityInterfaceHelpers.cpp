@@ -133,16 +133,36 @@ void createSplitWidget(QWidget*& panel, QComboBox*& selector, LineNumberHelpers*
     leftRoot->setContentsMargins(0,0,0,0);
     leftRoot->setSpacing(6);
 
-    QHBoxLayout *leftFileRow = new QHBoxLayout();
-    QLabel *leftLabel = new QLabel(labelName, panel);
-    selector = new QComboBox(panel);
-    selector->setEditable(false);
-    selector->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-    leftFileRow->addWidget(leftLabel);
-    leftFileRow->addWidget(selector, 1);
-    leftRoot->addLayout(leftFileRow);
+    // Header container so we can force a consistent row height
+    QWidget *headerWidget = new QWidget(panel);
+    QHBoxLayout *leftFileRow = new QHBoxLayout(headerWidget);
+    leftFileRow->setContentsMargins(0,0,0,0);
+    leftFileRow->setSpacing(6);
 
-    // use LineNumberViewer instead of QPlainTextEdit
+    if (labelName == "Left (src): ") {
+        QLabel *hunkLabel = new QLabel("===== ALL HUNKS SHOWING NOW =====", headerWidget);
+        hunkLabel->setAlignment(Qt::AlignCenter);
+        hunkLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        leftFileRow->addWidget(hunkLabel, 1);
+    } else {
+        QLabel *leftLabel = new QLabel(labelName, headerWidget);
+
+        selector = new QComboBox(headerWidget);
+        selector->setEditable(false);
+        selector->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+
+        leftFileRow->addWidget(leftLabel);
+        leftFileRow->addWidget(selector, 1);
+    }
+
+    // Match the "normal" header height (combo row height) so both panels align
+    QComboBox probe(panel);
+    probe.setEditable(false);
+    headerWidget->setFixedHeight(probe.sizeHint().height());
+
+    leftRoot->addWidget(headerWidget);
+
+    // Editor
     helper = new LineNumberHelpers(panel);
     helper->setOverrideLineNumbers(offsetLineNumbers);
     QFont monospace(QFontDatabase::systemFont(QFontDatabase::FixedFont));

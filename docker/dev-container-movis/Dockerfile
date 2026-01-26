@@ -99,15 +99,18 @@ RUN mkdir -p $HOME/Desktop
 RUN mkdir -p $HOME/MOVis
 
 # Download and extract MOVis release
-RUN wget -O /tmp/MOVis-Linux.zip \
-    https://raw.githubusercontent.com/unlv-evol/MOVis/main/release/MOVis-Linux.zip && \
+RUN wget -L --no-cache --header="Cache-Control: no-cache" \
+    -O /tmp/MOVis-Linux.zip \
+    https://media.githubusercontent.com/media/unlv-evol/MOVis/main/release/MOVis-Linux.zip && \
     unzip /tmp/MOVis-Linux.zip -d $HOME/MOVis/ && \
     rm /tmp/MOVis-Linux.zip
+
 
 RUN echo "Top-level contents of /config/MOVis:" && ls -lah $HOME/MOVis/
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --ignore-installed -r $HOME/MOVis/Desktop_Qt_6_8_3-Release/Pareco/requirements.txt --break-system-packages
+RUN pip install --no-cache-dir --ignore-installed -r $HOME/MOVis/MOVis-Linux/Desktop_Qt_6_8_3-Release/Pareco/requirements.txt --break-system-packages
+RUN npm install --prefix $HOME/MOVis/MOVis-Linux/Desktop_Qt_6_8_3-Release/Pareco/
 
 RUN mkdir -p $HOME/.config/my-scripts
 RUN mkdir -p $HOME/.config/autostart

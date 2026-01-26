@@ -727,7 +727,7 @@ class Pareco:
 
         totals_list = [total_MO, total_ED, total_SP, total_CC, total_NE, total_NA, total_ERROR]
 
-        analysis.all_class_bar(totals_list, self.repo_check_number, self.repo_main_line, self.repo_divergent, True)
+        analysis.all_class_bar(totals_list, self.repo_check_number, self.repo_main_line, self.repo_divergent, False)
 
     def fetchPrData(self):
         destination_sha, self.ct = dataloader.get_variant_sha(self.repo_divergent, self.cut_off_date, self.token_list,
