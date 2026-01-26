@@ -118,31 +118,36 @@ macx { # TODO-ADD Pareco
     QMAKE_POST_LINK += $(MAKE) -f Makefile post_build
 }
 
-unix:!macx { # TODO-ADD Pareco
+unix:!macx {
     CONFIG += linux
 
     # Paths for source and destination directories
     INCLUDE_SRC = $$PWD/include
-    INCLUDE_DEST = $$OUT_PWD/include
-    LOGS_DEST = $$OUT_PWD/logs
-    LOGS_SRC = $$PWD/logs
-    IMAGES_SRC = $$PWD/assets
-    IMAGES_DEST = $$OUT_PWD/assets
+    LOGS_SRC    = $$PWD/logs
+    Pareco_SRC  = $$PWD/Pareco
+    IMAGES_SRC  = $$PWD/assets
 
-    # Custom command to copy the include folder
-    copy_include.commands = mkdir -p $$INCLUDE_DEST && cp -r $$INCLUDE_SRC/. $$INCLUDE_DEST
-    QMAKE_EXTRA_TARGETS += copy_include
+    # Destination directory adjusted for release/debug (same as Windows; both are $$OUT_PWD)
+    CONFIG(debug, debug|release) {
+        BUILD_DIR = $$OUT_PWD
+    } else {
+        BUILD_DIR = $$OUT_PWD
+    }
 
-    # Custom command to copy the images folder
-    copy_images.commands = mkdir -p $$IMAGES_DEST && cp -r $$IMAGES_SRC/. $$IMAGES_DEST
-    QMAKE_EXTRA_TARGETS += copy_images
+    INCLUDE_DEST = $$BUILD_DIR/include
+    LOGS_DEST    = $$BUILD_DIR/logs
+    Pareco_DEST  = $$BUILD_DIR/Pareco
+    IMAGES_DEST  = $$BUILD_DIR/assets
 
-    # Custom command to copy the logs folder
-    copy_logs.commands = mkdir -p $$LOGS_DEST && cp -r $$LOGS_SRC/. $$LOGS_DEST
-    QMAKE_EXTRA_TARGETS += copy_logs
+    # One target that copies everything (mirror Windows copy_third)
+    copy_third.commands = \
+        mkdir -p "$$INCLUDE_DEST" && cp -R "$$INCLUDE_SRC/." "$$INCLUDE_DEST/" && \
+        mkdir -p "$$IMAGES_DEST"  && cp -R "$$IMAGES_SRC/."  "$$IMAGES_DEST/"  && \
+        mkdir -p "$$LOGS_DEST"    && cp -R "$$LOGS_SRC/."    "$$LOGS_DEST/"    && \
+        mkdir -p "$$Pareco_DEST"  && cp -R "$$Pareco_SRC/."  "$$Pareco_DEST/"
 
-    # Ensure the copy commands are executed before building
-    PRE_TARGETDEPS += copy_logs copy_include
+    QMAKE_EXTRA_TARGETS += copy_third
+    PRE_TARGETDEPS += copy_third
 
     contains(QMAKE_CXX, g++) {
         message("Using g++ on Linux")

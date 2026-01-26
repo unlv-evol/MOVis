@@ -64,10 +64,10 @@ similarityInterface::similarityInterface(QWidget *parent, QString rootParam) : Q
                      this,
                      &similarityInterface::onPRChanged);
 
-    connect(leftFileSelector,
+/*    connect(leftFileSelector,
                      QOverload<int>::of(&QComboBox::currentIndexChanged),
                      this,
-                     &similarityInterface::switchFilesOnLeft);
+                     &similarityInterface::switchFilesOnLeft)*/;
 
     connect(rightFileSelector,
                      QOverload<int>::of(&QComboBox::currentIndexChanged),
@@ -91,7 +91,7 @@ similarityInterface::similarityInterface(QWidget *parent, QString rootParam) : Q
         onClassificationChanged(0);
     } else {
         prCombo->clear();
-        leftFileSelector->clear();
+        // leftFileSelector->clear();
         rightFileSelector->clear();
     }
 
@@ -133,7 +133,12 @@ void similarityInterface::onClassificationChanged(int){
     const QString classification = classificationCombo->currentText();
     const QSet<QString> prsSet = classificationToPRs.value(classification);
     const QStringList prs = sortedSet(prsSet);
-    qDebug()<<prs;
+
+    startingCheck = 0;
+    lastCheck = "0";
+    lastCheckName = "";
+    addedLines = 0;
+
     prCombo->addItems(prs);
     prCombo->blockSignals(false);
 
@@ -141,7 +146,7 @@ void similarityInterface::onClassificationChanged(int){
         prCombo->setCurrentIndex(0);
         onPRChanged(0);
     } else {
-        leftFileSelector->clear();
+        // leftFileSelector->clear();
         rightFileSelector->clear();
         leftEdit->clear();
         leftPath.clear();
@@ -162,7 +167,7 @@ void similarityInterface::onPRChanged(int){
     const QString classification = classificationCombo->currentText();
     const QString pr  = prCombo->currentText();
 
-    leftFileSelector->clear();
+    // leftFileSelector->clear();
     leftEdit->clear();
     leftPath.clear();
     QLabel *hunkValue = topGroup->findChild<QLabel*>("HunkValueLabel");
@@ -431,116 +436,105 @@ bool similarityInterface::loadPathIntoLeftOrRight(const QString &path, QPlainTex
 
 void similarityInterface::highlightRange(QPlainTextEdit *editor, int startLine, int startColumn,
                                    int endLine, int endColumn, const QColor &color){
+
+    qDebug()<<"====================================================";
+    qDebug()<<"====================================================";
+    qDebug()<<"====================================================";
+
     QTextDocument *document = editor->document();
     int startPos = toPos(editor, startLine, startColumn);
     int endPos = toPos(editor, endLine, endColumn);
+
     QColor context= QColor(180, 180, 255);
-    QColor green = QColor(180,255,180);
-    QColor red = QColor(255,180,180);
-    QColor purple = QColor(255, 255, 180);
+    QColor purple = QColor(255, 180, 255);
+    QColor green = QColor(180, 255, 180);
+    QColor red = QColor(255, 180, 180);
 
     if (endPos < startPos) {
         int tmp = startPos;
         startPos = endPos;
         endPos = tmp;
     }
-    int startingCheck = 0;
-    int whitespaceCount = 0;
+
+    int localCheck = startingCheck-addedLines;
+    if(localCheck < 0)
+        localCheck = 0;
+
+    int adding = 0;
+
     for(QTextBlock startBlock = document->findBlock(startPos);
          startBlock.isValid() && startBlock.position() <= document->findBlock(endPos).position();
          startBlock=startBlock.next()){
-        bool both = false;
         const QString text = startBlock.text();
+
         if(text.length() == 0){
             startingCheck++;
+            localCheck++;
             continue;
         }
 
-        if(editor == rightEdit){
-            if(rightLineCheck.contains(startingCheck)){
-                QColor existing = rightLineCheck.value(startingCheck);
-                if(existing == context){
-                    QTextCursor cursor(document);
-                    cursor.setPosition(startBlock.position());
-                    cursor.setPosition(startBlock.position() + startBlock.length(), QTextCursor::KeepAnchor);
+        if(editor == leftEdit){
+            QTextCursor cursor(document);
+            cursor.setPosition(startBlock.position());
+            cursor.setPosition(startBlock.position() + startBlock.length(), QTextCursor::KeepAnchor);
 
-                    QTextEdit::ExtraSelection selection;
-                    selection.cursor = cursor;
-
-                    selection.format.setBackground(context);
-                    selection.format.setForeground(Qt::black);
-
-                    rightSelections.push_back(selection);
-                    startingCheck++;
-                    continue;
+            QTextEdit::ExtraSelection selection;
+            selection.cursor = cursor;
+            qDebug()<<"Text: "<<text;
+            if(text[0] != "+" && text[0] != "-"){
+                selection.format.setBackground(context);
+                if(leftLineCheck.contains(startingCheck) && leftLineCheck[startingCheck]!=context){
+                    rightLineCheck.insert(startingCheck, leftLineCheck[startingCheck]);
+                }else{
+                    leftLineCheck.insert(startingCheck, context);
+                    rightLineCheck.insert(startingCheck, context);
                 }
-                else if(existing == purple){
-                    QTextCursor cursor(document);
-                    cursor.setPosition(startBlock.position());
-                    cursor.setPosition(startBlock.position() + startBlock.length(), QTextCursor::KeepAnchor);
-
-                    QTextEdit::ExtraSelection selection;
-                    selection.cursor = cursor;
-
-                    selection.format.setBackground(purple);
-                    selection.format.setForeground(Qt::black);
-
-                    rightSelections.push_back(selection);
-                    startingCheck++;
-                    continue;
-                }
-                else if(existing == green && color ==red){
-                    both = true;
-                }
-                else if(existing == red && color == green){
-                    both = true;
-                }
-            }
-        }
-
-        QTextCursor cursor(document);
-        cursor.setPosition(startBlock.position());
-        cursor.setPosition(startBlock.position() + startBlock.length(), QTextCursor::KeepAnchor);
-
-        QTextEdit::ExtraSelection selection;
-        selection.cursor = cursor;
-
-        if(text[0] != "+" && text[0] != "-" && editor == leftEdit){
-            selection.format.setBackground(context);
-            rightLineCheck.insert(startingCheck, context);
-            if(editor == leftEdit){
-                rightFileCheck.insert(startingCheck, true);
-            }
-        }else{
-            if(both){
-                selection.format.setBackground(purple);
+                qDebug()<<"***Context***: "<<context;
             }else{
+                if(leftLineCheck.contains(startingCheck) && leftLineCheck[startingCheck]!=context){
+                    selection.format.setBackground(purple);
+                    rightLineCheck.insert(startingCheck, purple);
+                    qDebug()<<"***Purple***: "<<purple;
+                }
+
                 selection.format.setBackground(color);
-                rightLineCheck.insert(startingCheck, color);
-            }
+                if(!rightLineCheck.contains(startingCheck) ||
+                    (leftLineCheck.contains(startingCheck) && leftLineCheck[startingCheck] == context))
+                    rightLineCheck.insert(startingCheck, color);
 
-            if(editor == leftEdit){
-                rightFileCheck.insert(startingCheck, false);
-            }
-        }
-         selection.format.setForeground(Qt::black);
+                leftLineCheck.insert(startingCheck, color);
+                qDebug()<<"***Color***: "<<color;
 
-        if (editor == leftEdit){
+            }
+            qDebug()<<"Check Number: "<<startingCheck;
+
+            selection.format.setForeground(Qt::black);
             leftSelections.push_back(selection);
-        }
-        else{
+            startingCheck++;
+            adding++;
+        }else{
+            QColor existing;
+            if(rightLineCheck.contains(localCheck)){
+                existing = rightLineCheck[localCheck];
+            }else{
+                existing = context;
+            }
+            QTextCursor cursor(document);
+            cursor.setPosition(startBlock.position());
+            cursor.setPosition(startBlock.position() + startBlock.length(), QTextCursor::KeepAnchor);
+
+            QTextEdit::ExtraSelection selection;
+            selection.cursor = cursor;
+            selection.format.setBackground(existing);
+            // qDebug()<<"Right Color: "<<existing;
+            // qDebug()<<"Right Text: "<<text;
+            // qDebug()<<"Check Number: "<<localCheck;
+            selection.format.setForeground(Qt::black);
             rightSelections.push_back(selection);
+            localCheck++;
         }
-
-        startingCheck++;
     }
-
-    // QTextCursor cursor(document);
-    // cursor.setPosition(startPos);
-    // cursor.setPosition(endPos, QTextCursor::KeepAnchor);
-
-    // QTextEdit::ExtraSelection selection;
-    // selection.cursor = cursor;
+    addedLines = adding;
 }
 
 void similarityInterface::applySelections(QPlainTextEdit *editor){
@@ -655,6 +649,21 @@ void similarityInterface::highlightSimilarLines(){
 
         fStartLine = base + (fStartLine);
         fEndLine   = base + (fEndLine);
+
+        QStringList check = key.split("_");
+
+        if(check[1] != lastCheck){
+            qDebug()<<"***************************HERE";
+            leftLineCheck.clear();
+            rightLineCheck.clear();
+            lastCheck = check[1];
+            startingCheck = 0;
+        }
+
+        if(check[2]!=lastCheckName){
+            startingCheck = 0;
+            lastCheckName = check[2];
+        }
 
         QColor col;
 
@@ -821,7 +830,7 @@ void similarityInterface::resetComparisonState(){
 
 void similarityInterface::clearLeftPane(bool clearSelector){
     if (clearSelector){
-        leftFileSelector->clear();
+        // leftFileSelector->clear();
     }
 
     leftEdit->clear();
