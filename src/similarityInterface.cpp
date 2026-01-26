@@ -557,8 +557,7 @@ void similarityInterface::highlightSimilarLines(){
 
     int firstRightDupLine = 0;
 
-    if (rightPath.isEmpty())
-    {
+    if (rightPath.isEmpty()){
         startupHighlightsRan = true;
         return;
     }
@@ -567,8 +566,7 @@ void similarityInterface::highlightSimilarLines(){
     QString hunkName;
     QString githubPathName;
 
-    if (!getRepoContextFromCmp(repoBaseAbs, hunkName, githubPathName))
-    {
+    if (!getRepoContextFromCmp(repoBaseAbs, hunkName, githubPathName)){
         startupHighlightsRan = true;
         return;
     }
@@ -580,8 +578,7 @@ void similarityInterface::highlightSimilarLines(){
     QFile rf;
     bool usingRepoReport = false;
 
-    if (!openJscpdReport(repoBaseAbs, prRootAbs, rf, usingRepoReport))
-    {
+    if (!openJscpdReport(repoBaseAbs, prRootAbs, rf, usingRepoReport)){
         startupHighlightsRan = true;
         return;
     }
@@ -600,8 +597,8 @@ void similarityInterface::highlightSimilarLines(){
     for (int i = 0; i < dups.size(); ++i)
     {
         QJsonValue v = dups.at(i);
-        if (!v.isObject())
-        {
+        
+        if (!v.isObject()){
             continue;
         }
 
@@ -614,13 +611,11 @@ void similarityInterface::highlightSimilarLines(){
         QString firstName = normalizePath(firstObj.value("name").toString());
         QString secondName = normalizePath(secondObj.value("name").toString());
 
-        if (!passesHunkFilter(firstName, secondName, usingRepoReport, hunkName))
-        {
+        if (!passesHunkFilter(firstName, secondName, usingRepoReport, hunkName)){
             continue;
         }
 
-        if (!matchesFilePair(firstName, secondName, keys))
-        {
+        if (!matchesFilePair(firstName, secondName, keys)){
             continue;
         }
 
@@ -640,6 +635,7 @@ void similarityInterface::highlightSimilarLines(){
         QStringList firstObjCheck = firstName.split("/");
 
         const QString key = firstObjCheck[1];
+        
         if (!leftHunkIndexByFileName.contains(key))
             continue;
 
@@ -653,7 +649,6 @@ void similarityInterface::highlightSimilarLines(){
         QStringList check = key.split("_");
 
         if(check[1] != lastCheck){
-            qDebug()<<"***************************HERE";
             leftLineCheck.clear();
             rightLineCheck.clear();
             lastCheck = check[1];
@@ -680,27 +675,23 @@ void similarityInterface::highlightSimilarLines(){
         int rightStartPos = 0;
         int rightEndPos = 0;
 
-        if (leftHasText)
-        {
+        if (leftHasText){
             highlightRange(leftEdit, fStartLine, fStartCol, fEndLine, fEndCol+3, col);
             leftStartPos = toPos(leftEdit, fStartLine, fStartCol);
             leftEndPos = toPos(leftEdit, fEndLine, fEndCol);
         }
 
-        if (rightHasText)
-        {
+        if (rightHasText){
             highlightRange(rightEdit, sStartLine, sStartCol, sEndLine, sEndCol, col);
             rightStartPos = toPos(rightEdit, sStartLine, sStartCol);
             rightEndPos = toPos(rightEdit, sEndLine, sEndCol);
 
-            if (firstRightDupLine == 0)
-            {
+            if (firstRightDupLine == 0){
                 firstRightDupLine = sStartLine;
             }
         }
 
-        if (leftStartPos >= 0 && rightStartPos >= 0)
-        {
+        if (leftStartPos >= 0 && rightStartPos >= 0){
             DuplicateRegion reg;
             reg.leftStartPos = leftStartPos;
             reg.leftEndPos = leftEndPos;
@@ -788,7 +779,6 @@ void similarityInterface::updateSimilarityOnPair(){
     }
 
     // Derive the similarity results path from the right cmpPath.
-    // This matches the logic you already had but centralizes it.
     QStringList testing2 = rightPath.split("Repos_results/");
     if (testing2.size() < 2) {
         changeGroupBoxValues(topGroup, "-", "-");
@@ -910,50 +900,40 @@ QString similarityInterface::extractCurrentFileFromCmpPath(const QString &cmpPat
     const QString suffix = cmpPath.mid(pos + marker.size());
     const QStringList parts = suffix.split('/', Qt::SkipEmptyParts);
 
-    // Keeping your original behavior (index 5)
-    return parts.value(5);
+    return parts[5];
 }
 
 bool similarityInterface::matchesFilePair(const QString &firstName, const QString &secondName, const JscpdMatchKeys &keys){
     bool leftMatch = false;
     bool rightMatch = false;
 
-    if (firstName.endsWith(keys.leftRelRepo))
-    {
+    if (firstName.endsWith(keys.leftRelRepo)){
         leftMatch = true;
     }
-    else if (firstName.endsWith(keys.leftRelPR))
-    {
+    else if (firstName.endsWith(keys.leftRelPR)){
         leftMatch = true;
     }
-    else if (firstName.endsWith("/" + keys.leftFileName))
-    {
+    else if (firstName.endsWith("/" + keys.leftFileName)){
         leftMatch = true;
     }
-    else if (firstName == keys.leftFileName)
-    {
+    else if (firstName == keys.leftFileName){
         leftMatch = true;
     }
 
-    if (secondName.endsWith(keys.rightRelRepo))
-    {
+    if (secondName.endsWith(keys.rightRelRepo)){
         rightMatch = true;
     }
-    else if (secondName.endsWith(keys.rightRelPR))
-    {
+    else if (secondName.endsWith(keys.rightRelPR)){
         rightMatch = true;
     }
-    else if (secondName.endsWith("/" + keys.rightFileName))
-    {
+    else if (secondName.endsWith("/" + keys.rightFileName)){
         rightMatch = true;
     }
-    else if (secondName == keys.rightFileName)
-    {
+    else if (secondName == keys.rightFileName){
         rightMatch = true;
     }
 
-    if (!leftMatch || !rightMatch)
-    {
+    if (!leftMatch || !rightMatch){
         return false;
     }
 
@@ -961,26 +941,22 @@ bool similarityInterface::matchesFilePair(const QString &firstName, const QStrin
 }
 
 bool similarityInterface::passesHunkFilter(const QString &firstName, const QString &secondName, bool usingRepoReport, const QString &hunkName){
-    if (usingRepoReport)
-    {
+    if (usingRepoReport){
         return true;
     }
 
     bool inHunkFirst = false;
     bool inHunkSecond = false;
 
-    if (firstName.contains("/" + hunkName + "/") || firstName.startsWith(hunkName + "/"))
-    {
+    if (firstName.contains("/" + hunkName + "/") || firstName.startsWith(hunkName + "/")){
         inHunkFirst = true;
     }
 
-    if (secondName.contains("/" + hunkName + "/") || secondName.startsWith(hunkName + "/"))
-    {
+    if (secondName.contains("/" + hunkName + "/") || secondName.startsWith(hunkName + "/")){
         inHunkSecond = true;
     }
 
-    if (!inHunkFirst || !inHunkSecond)
-    {
+    if (!inHunkFirst || !inHunkSecond){
         return false;
     }
 
@@ -1013,13 +989,11 @@ bool similarityInterface::parseDuplicates(QFile &rf, QJsonArray &duplicatesOut){
     QJsonParseError perr;
     QJsonDocument doc = QJsonDocument::fromJson(bytes, &perr);
 
-    if (perr.error != QJsonParseError::NoError)
-    {
+    if (perr.error != QJsonParseError::NoError){
         return false;
     }
 
-    if (!doc.isObject())
-    {
+    if (!doc.isObject()){
         return false;
     }
 
@@ -1034,8 +1008,7 @@ bool similarityInterface::openJscpdReport(const QString &repoBaseAbs, const QStr
     QString repoReportPath = QDir(repoBaseAbs).filePath("reports/html/jscpd-report.json");
     rf.setFileName(repoReportPath);
 
-    if (rf.open(QIODevice::ReadOnly))
-    {
+    if (rf.open(QIODevice::ReadOnly)){
         usingRepoReport = true;
         return true;
     }
@@ -1043,8 +1016,7 @@ bool similarityInterface::openJscpdReport(const QString &repoBaseAbs, const QStr
     QString prReportPath = QDir(prRootAbs).filePath("reports/html/jscpd-report.json");
     rf.setFileName(prReportPath);
 
-    if (rf.open(QIODevice::ReadOnly))
-    {
+    if (rf.open(QIODevice::ReadOnly)){
         usingRepoReport = false;
         return true;
     }
@@ -1088,4 +1060,3 @@ void similarityInterface::clearStartupHighlightState(){
     applySelections(leftEdit);
     applySelections(rightEdit);
 }
-
