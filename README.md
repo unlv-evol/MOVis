@@ -1,7 +1,7 @@
 # MOVis: Replication Package
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Conference](https://img.shields.io/badge/FSE-2026-blue.svg)](#)
+[![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](./LICENSE)
+[![Conference](https://img.shields.io/badge/ASE-2026-blue.svg)](#)
 [![Artifact Type](https://img.shields.io/badge/Artifact-Tool%20Demo-orange.svg)](#)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18356553.svg)](https://doi.org/10.5281/zenodo.18356553)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://doi.org/10.5281/zenodo.18356553/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://doi.org/10.5281/zenodo.18356553)
