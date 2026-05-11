@@ -165,15 +165,37 @@ When running the demo, users should observe:
 
 ## Development Environment Setup
 
-### Windows
+### Windows / Linux / macOS
 
-*(Instructions to be added)*
+To Build MOVis on your own you must install Qt directly in your preferred operating system. 
 
-### Linux / macOS
+Here is a step to step guide:
 
-*(Instructions to be added)*
+(1) Download [Qt](https://www.qt.io/development/download-qt-installer-oss)
+**Note**: You must create a Qt Account before downloading Qt.
+![](https://i.imgur.com/LLTD1tv.png)
 
-> **Note**: Docker support is provided for users who prefer a containerized setup.
+(2)  Install Qt
+![](https://i.imgur.com/zwNG7k4.png)
+![](https://i.imgur.com/0NHfvl6.png)
+![](https://i.imgur.com/yDKUDV8.png)
+![](https://i.imgur.com/eLRApoK.png)
+![](https://i.imgur.com/4JmgDlC.png)
+
+(3) In Qt Creator - Open the MOVis Project by clicking on the ".pro" file
+![](https://i.imgur.com/1MNLSZU.png)
+![](https://i.imgur.com/ZiDwvb0.png)
+
+(4 - Windows) Select MinGW 64-bit or the MSVC2022 compiler
+![](https://i.imgur.com/ZutbbN6.png)
+
+**Note**: %{Asciify:%{Kit:FileSystemName} Can be replaced with "MOVis" if you wish
+(4 - Linux/MacOS) Select the only option for those devices
+
+(5) Click "Configure Project"
+
+You may now run MOVis via Debug or Release form. 
+> **Note**: Docker support is provided for users who prefer a containerized setup. Qt is not installed on the set up but MOVis may still be used.
 
 ---
 
