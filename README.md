@@ -213,7 +213,7 @@ The modular structure of `Pareco/Methods` enables straightforward experimentatio
 
 ## License
 
-This project is released under the **MIT License**.
+This project is released under the **(L)GPL v3 License**.
 See the [`LICENSE`](./LICENSE) file for details.
 
 ---
