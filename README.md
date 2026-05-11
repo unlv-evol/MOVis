@@ -9,7 +9,7 @@
 
 This repository contains the **replication package** for the FSE 2026 Tool Demonstration paper:
 
-> **MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants**
+> **MOVis: Interactive Localization of Missed Patches Across Software Variants**
 
 **MOVis** is a visual analytics system that helps developers explore and reason about *missed patches* across related software variants by combining program analysis, mining-based techniques, and interactive visualization.
 
