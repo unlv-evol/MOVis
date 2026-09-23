@@ -123,6 +123,18 @@ You can run the **RePatch** tool using one of two approaches:
 
 The instructions below explain how to run the tool locally. **For most users, we recommend using the containerized setup provided in the [docker](docker/dev-container-movis/) directory, which includes a dedicated [README](docker/dev-container-repatch/README.md) with step-by-step guidance. This will automatically install and configure all neccessary tools**.
 
+## Running MOVis on Mac
+Steps to  follow to open on Mac:
+1) Open the zip folder
+2) Click on the Movis installer:
+    Displays Warning 
+    Movis not opened: Apple could not verify “Movis” is free from malware, “move to trash”
+3) Steps to by-pass warning
+    Go to settings
+    Go to privacy & security
+    You will see a warning: “Movis blocked to protect  your Mac”
+4) Click on “open any way”
+All is now set/application opens and you can use as required.
 ---
 
 ## Reproducing the Paper Demonstration
