@@ -7,9 +7,9 @@
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://doi.org/10.5281/zenodo.18356553/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://doi.org/10.5281/zenodo.18356553)
 [![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648/)](https://archive.softwareheritage.org/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648;origin=https://doi.org/10.5281/zenodo.18356553;visit=swh:1:snp:27266f32ac9c8d3edb2c71f0a40ec42c5175e7c5;anchor=swh:1:rel:1c8af992cf5f2031d820aa4ed18adeaf7070ae50;path=/unlv-evol-MOVis-1f4ba0f/) -->
 
-This repository contains the **replication package** for the FSE 2026 Tool Demonstration paper:
+This repository contains the **replication package** for MOVis with GACPD as its Back-End.
 
-> **MOVis: Interactive Localization of Missed Patches Across Software Variants**
+<!-- > **MOVis: Interactive Localization of Missed Patches Across Software Variants** -->
 
 **MOVis** is a visual analytics system that helps developers explore and reason about *missed patches* across related software variants by combining program analysis, mining-based techniques, and interactive visualization.
 
@@ -107,9 +107,9 @@ MOVis relies on the GitHub API for extracting pull request patches through **PaR
 
 ## Installation and Running MOvis
 
-This section will get you through installation and execution of the RePatch tool. **If you want to quickly reproduce the results in the paper without running the tool, kindly refer to "[reproducing-the-paper-demonstration](#reproducing-the-paper-demonstratio)" section**.
+This section will get you through installation and execution of the Movis tool. **If you want to quickly reproduce the results in the paper without running the tool, kindly refer to "[reproducing-the-paper-demonstration](#reproducing-the-paper-demonstratio)" section**.
 
-You can run the **RePatch** tool using one of two approaches:
+You can run the **MOVis** tool using one of two approaches:
 
 1. **Locally on your machine**, or
 2. **Using Docker**.
