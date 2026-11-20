@@ -25,8 +25,7 @@ void scanRootFolderForPRsAndClasses(QMap<QString, QSet<QString>>& classification
         QString pr;
         QString classification;
         if (parsePRClass(fileInfo.fileName(), pr, classification)) {
-            if(classification == "MO")
-                classificationToPRs[classification].insert(pr);
+            classificationToPRs[classification].insert(pr);
         }
     }
 }
@@ -131,4 +130,36 @@ QStringList scallAllFilesInCmp(const QString &rootDir,
 
     files.sort(Qt::CaseInsensitive);
     return files;
+}
+
+
+QStringList scanIndividualResultFiles(const QString &root,
+                                      const QString &pr,
+                                      const QString &classification,
+                                      const QString &fileClassification)
+{
+    QStringList resultFiles;
+
+    const QString prRoot =
+        buildDirWithPRAndClassification(root, pr, classification);
+    const QString classRoot =
+        QDir(prRoot).filePath(fileClassification);
+    const QDir classDir(classRoot);
+
+    if (!classDir.exists())
+        return resultFiles;
+
+    const QList<QFileInfo> fileDirs =
+        classDir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+
+    for (const QFileInfo &fileDirInfo : fileDirs) {
+        const QString resultsPath =
+            QDir(fileDirInfo.absoluteFilePath()).filePath("results.json");
+
+        if (QFileInfo::exists(resultsPath))
+            resultFiles.append(QFileInfo(resultsPath).absoluteFilePath());
+    }
+
+    resultFiles.sort(Qt::CaseInsensitive);
+    return resultFiles;
 }

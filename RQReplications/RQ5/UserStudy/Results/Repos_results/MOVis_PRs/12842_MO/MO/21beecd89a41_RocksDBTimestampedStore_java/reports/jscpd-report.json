@@ -1,0 +1,105 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 43,
+        "endLoc": {
+          "column": 40,
+          "line": 43,
+          "position": 1850
+        },
+        "name": "RocksDBTimestampedStore.java",
+        "start": 38,
+        "startLoc": {
+          "column": 0,
+          "line": 38,
+          "position": 1659
+        }
+      },
+      "format": "java",
+      "fragment": "import java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.Collection;\nimport java.util.Comparator;\nimport java.util.List;\nimport java.util.NoSuchElementException;",
+      "lines": 6,
+      "secondFile": {
+        "end": 7,
+        "endLoc": {
+          "column": 41,
+          "line": 7,
+          "position": 198
+        },
+        "name": "hunk_1_deletions.java",
+        "start": 2,
+        "startLoc": {
+          "column": 1,
+          "line": 2,
+          "position": 3
+        }
+      },
+      "tokens": 44
+    },
+    {
+      "firstFile": {
+        "end": 274,
+        "endLoc": {
+          "column": 50,
+          "line": 274,
+          "position": 12364
+        },
+        "name": "RocksDBTimestampedStore.java",
+        "start": 261,
+        "startLoc": {
+          "column": 12,
+          "line": 261,
+          "position": 11839
+        }
+      },
+      "format": "java",
+      "fragment": "            db.flush(fOptions, newColumnFamily);\n        }\n\n        @Override\n        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,\n                                           final WriteBatch batch) throws RocksDBException {\n            for (final KeyValue<byte[], byte[]> record : records) {\n                addToBatch(record.key, record.value, batch);\n            }\n        }\n\n        @Override\n        public void addToBatch(final byte[] key,\n                               final byte[] value,",
+      "lines": 14,
+      "secondFile": {
+        "end": 14,
+        "endLoc": {
+          "column": 51,
+          "line": 14,
+          "position": 543
+        },
+        "name": "hunk_2_deletions.java",
+        "start": 1,
+        "startLoc": {
+          "column": 13,
+          "line": 1,
+          "position": 13
+        }
+      },
+      "tokens": 90
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-04T10:06:21.660Z",
+    "formats": {
+      "java": {
+        "clones": 2,
+        "duplicatedLines": 18,
+        "duplicatedTokens": 134,
+        "lines": 522,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 3.4482758620689653,
+        "percentageTokens": 3.485045513654096,
+        "sources": 6,
+        "tokens": 3845
+      }
+    },
+    "total": {
+      "clones": 2,
+      "duplicatedLines": 18,
+      "duplicatedTokens": 134,
+      "lines": 522,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 3.4482758620689653,
+      "percentageTokens": 3.485045513654096,
+      "sources": 6,
+      "tokens": 3845
+    }
+  }
+}

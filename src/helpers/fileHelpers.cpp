@@ -39,12 +39,3 @@ bool isUnder(const QString &parentFolder, const QString &childFolder) {
     return !rel.startsWith("..");
 }
 
-bool editorHasText(QPlainTextEdit* edit){
-    if (!edit)
-        return false;
-
-    if (!edit->document())
-        return false;
-
-    return edit->document()->characterCount() > 1;
-}

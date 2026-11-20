@@ -1,0 +1,546 @@
+{
+    "classifiedPR": "12265",
+    "prTitle": "KAFKA-13968: Fix 3 major bugs of KRaft snapshot generating",
+    "prDescription": "*More detailed description of your change*\r\nThere are 3 bugs when a broker generates a snapshot.\r\n\r\n1. Broker should not generate snapshots until it starts publishing.\r\nBefore a broker starts publishing, `BrokerMetadataListener._publisher=None`,  so `_publisher.foreach(publish)` will do nothing, so `featuresDelta.metadataVersionChange().isPresent` is always true, so we will generating a snapshot on every commit since we believe metadata version has changed, here are the logs, note offset 1 is a LeaderChangeMessage so there is no snapshot:\r\n\r\n```\r\n[2022-06-08 13:07:43,010] INFO [BrokerMetadataSnapshotter id=0] Creating a new snapshot at offset 0... (kafka.server.metadata.BrokerMetadataSnapshotter:66)\r\n[2022-06-08 13:07:43,222] INFO [BrokerMetadataSnapshotter id=0] Creating a new snapshot at offset 2... (kafka.server.metadata.BrokerMetadataSnapshotter:66)\r\n[2022-06-08 13:07:43,727] INFO [BrokerMetadataSnapshotter id=0] Creating a new snapshot at offset 3... (kafka.server.metadata.BrokerMetadataSnapshotter:66)\r\n[2022-06-08 13:07:44,228] INFO [BrokerMetadataSnapshotter id=0] Creating a new snapshot at offset 4... (kafka.server.metadata.BrokerMetadataSnapshotter:66)\r\n```\r\n\r\n2. We should compute `metadataVersionChanged` before `_publisher.foreach(publish)`\r\nAfter `_publisher.foreach(publish)` the `BrokerMetadataListener_delta` is always Empty, so `metadataVersionChanged` is always false, this means we will never trigger snapshot generating even metadata version has changed.\r\n\r\n3. We should try to generate a snapshot when starting publishing\r\nWhen we started publishing, there may be a metadata version change, so we should try to generate a snapshot before first publishing.\r\n\r\n*Summary of testing strategy (including rationale)*\r\nA unit test.\r\n\r\n### Committer Checklist (excluded from commit message)\r\n- [ ] Verify design and implementation \r\n- [ ] Verify test coverage and CI build status\r\n- [ ] Verify documentation (including upgrade notes)\r\n",
+    "prLocation": "https://github.com/apache/kafka/pull/12265",
+    "repoDivergenceDate": "2021-07-06T17:39:59Z",
+    "cutoffDate": "2026-09-03T22:24:01Z",
+    "addedFilesSkipped": [],
+    "renamedFiles": [],
+    "files": [
+        {
+            "fileName": "core/src/main/scala/kafka/server/BrokerServer.scala",
+            "fileExtension": ".scala",
+            "language": "scala",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 61.5385,
+                    "directChangeClone": true
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                }
+            ]
+        },
+        {
+            "fileName": "core/src/main/scala/kafka/server/metadata/BrokerMetadataListener.scala",
+            "fileExtension": ".scala",
+            "language": "scala",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 50,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "ED"
+                },
+                {
+                    "classification": "MO",
+                    "number": 3,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "N/A"
+                }
+            ]
+        },
+        {
+            "fileName": "core/src/main/scala/kafka/server/metadata/BrokerMetadataSnapshotter.scala",
+            "fileExtension": ".scala",
+            "language": "scala",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 15,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 100,
+                    "directChangeClone": true
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                }
+            ]
+        },
+        {
+            "fileName": "core/src/test/scala/unit/kafka/server/metadata/BrokerMetadataListenerTest.scala",
+            "fileExtension": ".scala",
+            "language": "scala",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 35.7143,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "N/A"
+                },
+                {
+                    "classification": "NA",
+                    "number": 3,
+                    "additionsClassification": "NA",
+                    "deletionsClassification": "N/A"
+                }
+            ]
+        },
+        {
+            "fileName": "core/src/test/scala/unit/kafka/server/metadata/BrokerMetadataSnapshotterTest.scala",
+            "fileExtension": ".scala",
+            "language": "scala",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 100,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_additions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_deletions.scala",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_additions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_deletions.scala",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 57.1429,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_4_additions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_deletions.scala",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 28.5714,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_additions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_4_deletions.scala",
+                    "tokenSize": 20,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "N/A",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "N/A"
+                },
+                {
+                    "classification": "MO",
+                    "number": 3,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "NA",
+                    "number": 4,
+                    "additionsClassification": "NA",
+                    "deletionsClassification": "NA"
+                }
+            ]
+        }
+    ],
+    "recommendations": "TBO"
+}

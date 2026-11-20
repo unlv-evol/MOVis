@@ -1,0 +1,51 @@
+{
+    "fileName": "streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBTimestampedStore.java",
+    "fileExtension": ".java",
+    "language": "java",
+    "isConfigurationLanguage": false,
+    "pr": "12842",
+    "mainline": "apache/kafka",
+    "divergentRepo": "linkedin/kafka",
+    "changeStatus": "modified",
+    "renamed": false,
+    "renamedFileName": "",
+    "patchAvailable": true,
+    "patchStatus": "available",
+    "divergentPath": "linkedin/kafka/streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBTimestampedStore.java",
+    "divergentPathType": "resolved",
+    "classification": "MO",
+    "similarityChecks": [
+        {
+            "checkName": "hunk_1_deletions.java",
+            "tokenSize": 50,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_2_deletions.java",
+            "tokenSize": 50,
+            "similarityPercent": 100,
+            "directChangeClone": true
+        },
+        {
+            "checkName": "hunk_1_deletions.java",
+            "tokenSize": 40,
+            "similarityPercent": 85.7143,
+            "directChangeClone": true
+        }
+    ],
+    "hunks": [
+        {
+            "classification": "MO",
+            "number": 1,
+            "additionsClassification": "N/A",
+            "deletionsClassification": "MO"
+        },
+        {
+            "classification": "MO",
+            "number": 2,
+            "additionsClassification": "N/A",
+            "deletionsClassification": "MO"
+        }
+    ]
+}

@@ -7,6 +7,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QFileInfo>
+#include <QJsonObject>
 #include "structures/prFileReport.h"
 
 class prSimilarityParser {
@@ -31,6 +32,7 @@ private:
     QVector<FileReport> reports;
 
     void parseStream(QTextStream &in);
+    void parseJson(const QJsonObject &root);
 
     const FileReport* findFileReport(const QString &fileName);
     const HunkInfo* findHunk(const FileReport &rep, const QString &hunkName);

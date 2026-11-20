@@ -1,0 +1,41 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListener.scala",
+                "start": 131,
+                "end": 144,
+                "startLoc": {
+                    "line": 131,
+                    "column": 12,
+                    "position": 4739
+                },
+                "endLoc": {
+                    "line": 144,
+                    "column": 5,
+                    "position": 4981
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.scala",
+                "start": 14,
+                "end": 26,
+                "startLoc": {
+                    "line": 14,
+                    "column": 45,
+                    "position": 550
+                },
+                "endLoc": {
+                    "line": 26,
+                    "column": 6,
+                    "position": 787
+                }
+            },
+            "format": "scala",
+            "fragment": "            _highestTimestamp,\n            _delta.apply())) {\n            _bytesSinceLastSnapshot = 0L\n          }\n        }\n      }\n    }\n  }\n\n  private def shouldSnapshot(): Boolean = {\n    _bytesSinceLastSnapshot >= maxBytesBetweenSnapshots\n  }\n\n  /**",
+            "lines": 14,
+            "tokens": 35
+        }
+    ]
+}

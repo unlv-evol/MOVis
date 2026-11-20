@@ -1,0 +1,41 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerServer.scala",
+                "start": 61,
+                "end": 68,
+                "startLoc": {
+                    "line": 61,
+                    "column": 4,
+                    "position": 2948
+                },
+                "endLoc": {
+                    "line": 68,
+                    "column": 9,
+                    "position": 3348
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.scala",
+                "start": 1,
+                "end": 8,
+                "startLoc": {
+                    "line": 1,
+                    "column": 5,
+                    "position": 5
+                },
+                "endLoc": {
+                    "line": 8,
+                    "column": 9,
+                    "position": 407
+                }
+            },
+            "format": "scala",
+            "fragment": "    extends SnapshotWriterBuilder {\n  override def build(committedOffset: Long,\n                     committedEpoch: Int,\n                     lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion] = {\n    raftClient.createSnapshot(committedOffset, committedEpoch, lastContainedLogTime).\n        asScala.getOrElse(\n      throw new RuntimeException(\"A snapshot already exists with \" +\n        s\"committedOffset=${committedOffset}, committedEpoch=${committedEpoch}, \" +",
+            "lines": 8,
+            "tokens": 48
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+@@ -584,9 +584,6 @@ void deleteRange(final byte[] from,
+ 
+         void flush() throws RocksDBException;
+ 
+-        void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,
+-                                    final WriteBatch batch) throws RocksDBException;
+-
+         void addToBatch(final byte[] key,
+                         final byte[] value,
+                         final WriteBatch batch) throws RocksDBException;
+@@ -700,14 +697,6 @@ public void flush() throws RocksDBException {
+             db.flush(fOptions, columnFamily);
+         }
+ 
+-        @Override
+-        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,
+-                                           final WriteBatch batch) throws RocksDBException {
+-            for (final KeyValue<byte[], byte[]> record : records) {
+-                addToBatch(record.key, record.value, batch);
+-            }
+-        }
+-
+         @Override
+         public void addToBatch(final byte[] key,
+                                final byte[] value,
+@@ -727,17 +716,15 @@ public void close() {
+ 
+     void restoreBatch(final Collection<ConsumerRecord<byte[], byte[]>> records) {
+         try (final WriteBatch batch = new WriteBatch()) {
+-            final List<KeyValue<byte[], byte[]>> keyValues = new ArrayList<>();
+             for (final ConsumerRecord<byte[], byte[]> record : records) {
+                 ChangelogRecordDeserializationHelper.applyChecksAndUpdatePosition(
+                     record,
+                     consistencyEnabled,
+                     position
+                 );
+                 // If version headers are not present or version is V0
+-                keyValues.add(new KeyValue<>(record.key(), record.value()));
++                dbAccessor.addToBatch(record.key(), record.value(), batch);
+             }
+-            dbAccessor.prepareBatchForRestore(keyValues, batch);
+             write(batch);
+         } catch (final RocksDBException e) {
+             throw new ProcessorStateException("Error restoring batch to store " + name, e);

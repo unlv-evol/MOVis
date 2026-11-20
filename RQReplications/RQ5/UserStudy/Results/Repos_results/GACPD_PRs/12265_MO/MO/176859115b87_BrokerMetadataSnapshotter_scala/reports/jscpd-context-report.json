@@ -1,0 +1,141 @@
+{
+    "statistics": {
+        "formats": {
+            "scala": {
+                "clones": 3,
+                "duplicatedLines": 5,
+                "duplicatedTokens": 48,
+                "lines": 129,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 3.875968992248062,
+                "percentageTokens": 3.2764505119453924,
+                "sources": 3,
+                "tokens": 1465
+            }
+        },
+        "detectionDate": "2026-09-24T19:35:23.886Z",
+        "total": {
+            "clones": 3,
+            "duplicatedLines": 5,
+            "duplicatedTokens": 48,
+            "lines": 129,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 3.875968992248062,
+            "percentageTokens": 3.2764505119453924,
+            "sources": 3,
+            "tokens": 1465
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotter.scala",
+                "start": 29,
+                "end": 31,
+                "startLoc": {
+                    "line": 29,
+                    "column": 0,
+                    "position": 1185
+                },
+                "endLoc": {
+                    "line": 31,
+                    "column": 32,
+                    "position": 1282
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 1,
+                "end": 3,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 3,
+                    "column": 33,
+                    "position": 100
+                }
+            },
+            "format": "scala",
+            "fragment": "trait SnapshotWriterBuilder {\n  def build(committedOffset: Long,\n            committedEpoch: Int,",
+            "lines": 3,
+            "tokens": 14
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotter.scala",
+                "start": 53,
+                "end": 55,
+                "startLoc": {
+                    "line": 53,
+                    "column": 2,
+                    "position": 1909
+                },
+                "endLoc": {
+                    "line": 55,
+                    "column": 34,
+                    "position": 2031
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.scala",
+                "start": 1,
+                "end": 3,
+                "startLoc": {
+                    "line": 1,
+                    "column": 3,
+                    "position": 3
+                },
+                "endLoc": {
+                    "line": 3,
+                    "column": 35,
+                    "position": 127
+                }
+            },
+            "format": "scala",
+            "fragment": "  val eventQueue = new KafkaEventQueue(time, logContext, threadNamePrefix.getOrElse(\"\"))\n\n  override def maybeStartSnapshot(committedOffset: Long,",
+            "lines": 3,
+            "tokens": 21
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotter.scala",
+                "start": 57,
+                "end": 58,
+                "startLoc": {
+                    "line": 57,
+                    "column": 34,
+                    "position": 2143
+                },
+                "endLoc": {
+                    "line": 58,
+                    "column": 81,
+                    "position": 2252
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.scala",
+                "start": 3,
+                "end": 3,
+                "startLoc": {
+                    "line": 3,
+                    "column": 35,
+                    "position": 127
+                },
+                "endLoc": {
+                    "line": 3,
+                    "column": 110,
+                    "position": 202
+                }
+            },
+            "format": "scala",
+            "fragment": "                                  lastContainedLogTime: Long,\n                                  image: MetadataImage): Boolean = synchronized {",
+            "lines": 2,
+            "tokens": 13
+        }
+    ]
+}

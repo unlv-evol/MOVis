@@ -1,0 +1,99 @@
+{
+    "fileName": "streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBStore.java",
+    "fileExtension": ".java",
+    "language": "java",
+    "isConfigurationLanguage": false,
+    "pr": "12842",
+    "mainline": "apache/kafka",
+    "divergentRepo": "linkedin/kafka",
+    "changeStatus": "modified",
+    "renamed": false,
+    "renamedFileName": "",
+    "patchAvailable": true,
+    "patchStatus": "available",
+    "divergentPath": "linkedin/kafka/streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBStore.java",
+    "divergentPathType": "resolved",
+    "classification": "MO",
+    "similarityChecks": [
+        {
+            "checkName": "hunk_1_deletions.java",
+            "tokenSize": 50,
+            "similarityPercent": 88.8889,
+            "directChangeClone": true
+        },
+        {
+            "checkName": "hunk_2_deletions.java",
+            "tokenSize": 50,
+            "similarityPercent": 100,
+            "directChangeClone": true
+        },
+        {
+            "checkName": "hunk_3_additions.java",
+            "tokenSize": 50,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_deletions.java",
+            "tokenSize": 50,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_additions.java",
+            "tokenSize": 40,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_deletions.java",
+            "tokenSize": 40,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_additions.java",
+            "tokenSize": 30,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_deletions.java",
+            "tokenSize": 30,
+            "similarityPercent": 0,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_additions.java",
+            "tokenSize": 20,
+            "similarityPercent": 13.3333,
+            "directChangeClone": false
+        },
+        {
+            "checkName": "hunk_3_deletions.java",
+            "tokenSize": 20,
+            "similarityPercent": 23.5294,
+            "directChangeClone": true
+        }
+    ],
+    "hunks": [
+        {
+            "classification": "MO",
+            "number": 1,
+            "additionsClassification": "N/A",
+            "deletionsClassification": "MO"
+        },
+        {
+            "classification": "MO",
+            "number": 2,
+            "additionsClassification": "N/A",
+            "deletionsClassification": "MO"
+        },
+        {
+            "classification": "MO",
+            "number": 3,
+            "additionsClassification": "MO",
+            "deletionsClassification": "MO"
+        }
+    ]
+}

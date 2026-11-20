@@ -1,0 +1,13 @@
+requests
+numpy
+pandas
+matplotlib
+bitarray
+python-magic-bin==0.4.14
+unidiff
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+pytest
+PyDriller
+openai

@@ -1,0 +1,177 @@
+{
+    "statistics": {
+        "formats": {
+            "java": {
+                "clones": 4,
+                "duplicatedLines": 13,
+                "duplicatedTokens": 76,
+                "lines": 483,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 2.691511387163561,
+                "percentageTokens": 2.13903743315508,
+                "sources": 3,
+                "tokens": 3553
+            }
+        },
+        "detectionDate": "2026-09-04T10:06:19.949Z",
+        "total": {
+            "clones": 4,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 76,
+            "lines": 483,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 2.691511387163561,
+            "percentageTokens": 2.13903743315508,
+            "sources": 3,
+            "tokens": 3553
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 38,
+                "end": 40,
+                "startLoc": {
+                    "line": 38,
+                    "column": 0,
+                    "position": 1659
+                },
+                "endLoc": {
+                    "line": 40,
+                    "column": 17,
+                    "position": 1746
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.java",
+                "start": 2,
+                "end": 4,
+                "startLoc": {
+                    "line": 2,
+                    "column": 1,
+                    "position": 3
+                },
+                "endLoc": {
+                    "line": 4,
+                    "column": 18,
+                    "position": 92
+                }
+            },
+            "format": "java",
+            "fragment": "import java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.Collection;",
+            "lines": 3,
+            "tokens": 21
+        },
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 40,
+                "end": 43,
+                "startLoc": {
+                    "line": 40,
+                    "column": 27,
+                    "position": 1756
+                },
+                "endLoc": {
+                    "line": 43,
+                    "column": 40,
+                    "position": 1850
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.java",
+                "start": 3,
+                "end": 6,
+                "startLoc": {
+                    "line": 3,
+                    "column": 27,
+                    "position": 72
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 41,
+                    "position": 169
+                }
+            },
+            "format": "java",
+            "fragment": "import java.util.Collection;\nimport java.util.Comparator;\nimport java.util.List;\nimport java.util.NoSuchElementException;",
+            "lines": 4,
+            "tokens": 22
+        },
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 261,
+                "end": 265,
+                "startLoc": {
+                    "line": 261,
+                    "column": 12,
+                    "position": 11839
+                },
+                "endLoc": {
+                    "line": 265,
+                    "column": 19,
+                    "position": 11924
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.java",
+                "start": 1,
+                "end": 5,
+                "startLoc": {
+                    "line": 1,
+                    "column": 13,
+                    "position": 13
+                },
+                "endLoc": {
+                    "line": 5,
+                    "column": 20,
+                    "position": 102
+                }
+            },
+            "format": "java",
+            "fragment": "            db.flush(fOptions, newColumnFamily);\n        }\n\n        @Override\n        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,",
+            "lines": 5,
+            "tokens": 14
+        },
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 270,
+                "end": 274,
+                "startLoc": {
+                    "line": 270,
+                    "column": 8,
+                    "position": 12244
+                },
+                "endLoc": {
+                    "line": 274,
+                    "column": 50,
+                    "position": 12364
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.java",
+                "start": 2,
+                "end": 6,
+                "startLoc": {
+                    "line": 2,
+                    "column": 9,
+                    "position": 59
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 51,
+                    "position": 183
+                }
+            },
+            "format": "java",
+            "fragment": "        }\n\n        @Override\n        public void addToBatch(final byte[] key,\n                               final byte[] value,",
+            "lines": 5,
+            "tokens": 19
+        }
+    ]
+}

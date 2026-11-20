@@ -1,0 +1,177 @@
+{
+    "statistics": {
+        "formats": {
+            "scala": {
+                "clones": 4,
+                "duplicatedLines": 9,
+                "duplicatedTokens": 44,
+                "lines": 312,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 2.8846153846153846,
+                "percentageTokens": 1.328101418653788,
+                "sources": 4,
+                "tokens": 3313
+            }
+        },
+        "detectionDate": "2026-09-24T19:35:23.099Z",
+        "total": {
+            "clones": 4,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 44,
+            "lines": 312,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 2.8846153846153846,
+            "percentageTokens": 1.328101418653788,
+            "sources": 4,
+            "tokens": 3313
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListener.scala",
+                "start": 135,
+                "end": 140,
+                "startLoc": {
+                    "line": 135,
+                    "column": 8,
+                    "position": 4850
+                },
+                "endLoc": {
+                    "line": 140,
+                    "column": 43,
+                    "position": 4914
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 3,
+                "end": 10,
+                "startLoc": {
+                    "line": 3,
+                    "column": 7,
+                    "position": 50
+                },
+                "endLoc": {
+                    "line": 10,
+                    "column": 44,
+                    "position": 123
+                }
+            },
+            "format": "scala",
+            "fragment": "        }\n      }\n    }\n  }\n\n  private def shouldSnapshot(): Boolean = {",
+            "lines": 6,
+            "tokens": 13
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListener.scala",
+                "start": 194,
+                "end": 195,
+                "startLoc": {
+                    "line": 194,
+                    "column": 21,
+                    "position": 7016
+                },
+                "endLoc": {
+                    "line": 195,
+                    "column": 23,
+                    "position": 7068
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.scala",
+                "start": 5,
+                "end": 6,
+                "startLoc": {
+                    "line": 5,
+                    "column": 52,
+                    "position": 114
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 24,
+                    "position": 167
+                }
+            },
+            "format": "scala",
+            "fragment": "        delta.replay(messageAndVersion.message())\n        numRecords += 1",
+            "lines": 2,
+            "tokens": 10
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListener.scala",
+                "start": 227,
+                "end": 228,
+                "startLoc": {
+                    "line": 227,
+                    "column": 6,
+                    "position": 8169
+                },
+                "endLoc": {
+                    "line": 228,
+                    "column": 16,
+                    "position": 8214
+                }
+            },
+            "secondFile": {
+                "name": "hunk_3_context.scala",
+                "start": 1,
+                "end": 2,
+                "startLoc": {
+                    "line": 1,
+                    "column": 7,
+                    "position": 7
+                },
+                "endLoc": {
+                    "line": 2,
+                    "column": 17,
+                    "position": 53
+                }
+            },
+            "format": "scala",
+            "fragment": "      _publisher = Some(publisher)\n      log.info(s\"Starting to publish metadata events at offset ${_highestMetadataOffset}.\")",
+            "lines": 2,
+            "tokens": 11
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListener.scala",
+                "start": 230,
+                "end": 232,
+                "startLoc": {
+                    "line": 230,
+                    "column": 49,
+                    "position": 8351
+                },
+                "endLoc": {
+                    "line": 232,
+                    "column": 15,
+                    "position": 8398
+                }
+            },
+            "secondFile": {
+                "name": "hunk_3_context.scala",
+                "start": 4,
+                "end": 6,
+                "startLoc": {
+                    "line": 4,
+                    "column": 26,
+                    "position": 165
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 16,
+                    "position": 214
+                }
+            },
+            "format": "scala",
+            "fragment": "        publish(publisher, _highestMetadataOffset)\n        future.complete(null)\n      } catch {",
+            "lines": 3,
+            "tokens": 10
+        }
+    ]
+}

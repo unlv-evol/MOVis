@@ -1,0 +1,69 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 144,
+        "endLoc": {
+          "column": 5,
+          "line": 144,
+          "position": 4981
+        },
+        "name": "BrokerMetadataListener.scala",
+        "start": 131,
+        "startLoc": {
+          "column": 12,
+          "line": 131,
+          "position": 4739
+        }
+      },
+      "format": "scala",
+      "fragment": "            _highestTimestamp,\n            _delta.apply())) {\n            _bytesSinceLastSnapshot = 0L\n          }\n        }\n      }\n    }\n  }\n\n  private def shouldSnapshot(): Boolean = {\n    _bytesSinceLastSnapshot >= maxBytesBetweenSnapshots\n  }\n\n  /**",
+      "lines": 14,
+      "secondFile": {
+        "end": 26,
+        "endLoc": {
+          "column": 6,
+          "line": 26,
+          "position": 787
+        },
+        "name": "hunk_1_deletions.scala",
+        "start": 14,
+        "startLoc": {
+          "column": 45,
+          "line": 14,
+          "position": 550
+        }
+      },
+      "tokens": 35
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-24T19:35:23.654Z",
+    "formats": {
+      "scala": {
+        "clones": 1,
+        "duplicatedLines": 13,
+        "duplicatedTokens": 35,
+        "lines": 490,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 2.6530612244897958,
+        "percentageTokens": 0.8381226053639846,
+        "sources": 15,
+        "tokens": 4176
+      }
+    },
+    "total": {
+      "clones": 1,
+      "duplicatedLines": 13,
+      "duplicatedTokens": 35,
+      "lines": 490,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 2.6530612244897958,
+      "percentageTokens": 0.8381226053639846,
+      "sources": 15,
+      "tokens": 4176
+    }
+  }
+}

@@ -1,4 +1,7 @@
 #include "headers/prSimilarityParser.h"
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonParseError>
 
 bool prSimilarityParser::load(const QString &filePath, QString *errorOut){
     QFile f(filePath);
@@ -10,11 +13,35 @@ bool prSimilarityParser::load(const QString &filePath, QString *errorOut){
         return false;
     }
 
-    QTextStream in(&f);
     reports.clear();
     prTitle.clear();
     prLocation.clear();
+
+    const QByteArray contents = f.readAll();
+
+    QJsonParseError parseError;
+    const QJsonDocument json = QJsonDocument::fromJson(contents, &parseError);
+
+    if (parseError.error == QJsonParseError::NoError && json.isObject()) {
+        parseJson(json.object());
+        return true;
+    }
+
+    if (filePath.endsWith(".json", Qt::CaseInsensitive)) {
+        if (errorOut) {
+            *errorOut = QStringLiteral("Invalid JSON similarity results file: %1 (%2)")
+                .arg(filePath, parseError.errorString());
+        }
+        return false;
+    }
+
+    // Keep legacy pr_results.txt datasets readable. New runs always write
+    // structured pr_results.json, but old result folders should continue
+    // to open in the visualizer without a migration step.
+    QString legacyText = QString::fromUtf8(contents);
+    QTextStream in(&legacyText, QIODevice::ReadOnly);
     parseStream(in);
+
     return true;
 }
 
@@ -42,10 +69,56 @@ bool prSimilarityParser::query(const QString &fileName,
 QStringList prSimilarityParser::availableFiles(){
     QStringList keys;
     keys.reserve(reports.size());
-    for (const auto &rep : reports) {
+    for (const FileReport &rep : reports) {
         keys << rep.analyzedPath;
     }
     return keys;
+}
+
+void prSimilarityParser::parseJson(const QJsonObject &root){
+    prTitle = root.value("prTitle").toString();
+    prLocation = root.value("prLocation").toString();
+
+    const QJsonArray files = root.value("files").toArray();
+
+    for (const QJsonValue &fileValue : files) {
+        if (!fileValue.isObject()) {
+            continue;
+        }
+
+        const QJsonObject fileObject = fileValue.toObject();
+
+        FileReport report;
+        report.analyzedPath = fileObject.value("fileName").toString().trimmed();
+        report.overallClassification =
+            fileObject.value("classification").toString().trimmed();
+
+        const QJsonArray checks = fileObject.value("similarityChecks").toArray();
+
+        for (const QJsonValue &checkValue : checks) {
+            if (!checkValue.isObject()) {
+                continue;
+            }
+
+            const QJsonObject check = checkValue.toObject();
+            const QString checkName =
+                check.value("checkName").toString().trimmed();
+
+            if (checkName.isEmpty() ||
+                !check.value("similarityPercent").isDouble()) {
+                continue;
+            }
+
+            HunkInfo info;
+            info.similarityPercent =
+                check.value("similarityPercent").toDouble(-1.0);
+            report.hunks.insert(checkName, info);
+        }
+
+        if (!report.analyzedPath.isEmpty()) {
+            reports.push_back(report);
+        }
+    }
 }
 
 void prSimilarityParser::parseStream(QTextStream &in){
@@ -146,12 +219,13 @@ const HunkInfo* prSimilarityParser::findHunk(const FileReport &rep,
     const QString needle = hunkName.trimmed();
 
     // Exact key match first
-    auto itExact = rep.hunks.find(needle);
-    if (itExact != rep.hunks.end())
+    QHash<QString, HunkInfo>::const_iterator itExact = rep.hunks.constFind(needle);
+    if (itExact != rep.hunks.constEnd())
         return &itExact.value();
 
     // Otherwise substring match on keys
-    for (auto it = rep.hunks.begin(); it != rep.hunks.end(); ++it) {
+    for (QHash<QString, HunkInfo>::const_iterator it = rep.hunks.constBegin();
+         it != rep.hunks.constEnd(); ++it) {
         if (it.key().contains(needle, Qt::CaseInsensitive)) {
             return &it.value();
         }

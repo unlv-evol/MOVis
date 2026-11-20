@@ -1,0 +1,147 @@
+{
+    "classifiedPR": "12842",
+    "prTitle": "KAFKA-14406: Fix double iteration of restoring records",
+    "prDescription": "While restoring a batch of records, `RocksDBStore` was iterating the `ConsumerRecord`s, building a list of `KeyValue`s, and then iterating _that_ list of `KeyValue`s to add them to the RocksDB batch.\r\n\r\nSimply adding the key and value directly to the RocksDB batch prevents this unnecessary second iteration, and the creation of itermediate `KeyValue` objects, improving the performance of state restoration, and reducing unnecessary object allocation.\r\n\r\nThis also simplifies the API of `RocksDBAccessor`, as `prepareBatchForRestore` is no longer needed.",
+    "prLocation": "https://github.com/apache/kafka/pull/12842",
+    "repoDivergenceDate": "2022-07-06T00:00:00Z",
+    "cutoffDate": "2023-01-05T23:59:59Z",
+    "addedFilesSkipped": [],
+    "renamedFiles": [],
+    "files": [
+        {
+            "fileName": "streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBStore.java",
+            "fileExtension": ".java",
+            "language": "java",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_deletions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 88.8889,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_2_deletions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 100,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_3_additions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.java",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.java",
+                    "tokenSize": 40,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.java",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.java",
+                    "tokenSize": 30,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_additions.java",
+                    "tokenSize": 20,
+                    "similarityPercent": 13.3333,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_3_deletions.java",
+                    "tokenSize": 20,
+                    "similarityPercent": 23.5294,
+                    "directChangeClone": true
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "N/A",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "N/A",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 3,
+                    "additionsClassification": "MO",
+                    "deletionsClassification": "MO"
+                }
+            ]
+        },
+        {
+            "fileName": "streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBTimestampedStore.java",
+            "fileExtension": ".java",
+            "language": "java",
+            "isConfigurationLanguage": false,
+            "patchAvailable": true,
+            "patchStatus": "available",
+            "classification": "MO",
+            "similarityChecks": [
+                {
+                    "checkName": "hunk_1_deletions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 0,
+                    "directChangeClone": false
+                },
+                {
+                    "checkName": "hunk_2_deletions.java",
+                    "tokenSize": 50,
+                    "similarityPercent": 100,
+                    "directChangeClone": true
+                },
+                {
+                    "checkName": "hunk_1_deletions.java",
+                    "tokenSize": 40,
+                    "similarityPercent": 85.7143,
+                    "directChangeClone": true
+                }
+            ],
+            "hunks": [
+                {
+                    "classification": "MO",
+                    "number": 1,
+                    "additionsClassification": "N/A",
+                    "deletionsClassification": "MO"
+                },
+                {
+                    "classification": "MO",
+                    "number": 2,
+                    "additionsClassification": "N/A",
+                    "deletionsClassification": "MO"
+                }
+            ]
+        }
+    ],
+    "recommendations": "TBO"
+}

@@ -1,0 +1,285 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 303,
+        "endLoc": {
+          "column": 46,
+          "line": 303,
+          "position": 12826
+        },
+        "name": "RocksDBStore.java",
+        "start": 300,
+        "startLoc": {
+          "column": 43,
+          "line": 300,
+          "position": 12699
+        }
+      },
+      "format": "java",
+      "fragment": "            dbAccessor.prepareBatch(entries, batch);\n            write(batch);\n        } catch (final RocksDBException e) {\n            throw new ProcessorStateException(\"Error while batch writing to store \" + name, e);",
+      "lines": 4,
+      "secondFile": {
+        "end": 17,
+        "endLoc": {
+          "column": 47,
+          "line": 17,
+          "position": 852
+        },
+        "name": "hunk_3_deletions.java",
+        "start": 14,
+        "startLoc": {
+          "column": 55,
+          "line": 14,
+          "position": 722
+        }
+      },
+      "tokens": 21
+    },
+    {
+      "firstFile": {
+        "end": 550,
+        "endLoc": {
+          "column": 72,
+          "line": 550,
+          "position": 21846
+        },
+        "name": "RocksDBStore.java",
+        "start": 543,
+        "startLoc": {
+          "column": 8,
+          "line": 543,
+          "position": 21475
+        }
+      },
+      "format": "java",
+      "fragment": "        void flush() throws RocksDBException;\n\n        void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,\n                                    final WriteBatch batch) throws RocksDBException;\n\n        void addToBatch(final byte[] key,\n                        final byte[] value,\n                        final WriteBatch batch) throws RocksDBException;",
+      "lines": 8,
+      "secondFile": {
+        "end": 9,
+        "endLoc": {
+          "column": 73,
+          "line": 9,
+          "position": 386
+        },
+        "name": "hunk_1_deletions.java",
+        "start": 2,
+        "startLoc": {
+          "column": 9,
+          "line": 2,
+          "position": 11
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 550,
+        "endLoc": {
+          "column": 72,
+          "line": 550,
+          "position": 21846
+        },
+        "name": "RocksDBStore.java",
+        "start": 546,
+        "startLoc": {
+          "column": 58,
+          "line": 546,
+          "position": 21660
+        }
+      },
+      "format": "java",
+      "fragment": "                                    final WriteBatch batch) throws RocksDBException;\n\n        void addToBatch(final byte[] key,\n                        final byte[] value,\n                        final WriteBatch batch) throws RocksDBException;",
+      "lines": 5,
+      "secondFile": {
+        "end": 6,
+        "endLoc": {
+          "column": 73,
+          "line": 6,
+          "position": 212
+        },
+        "name": "hunk_1_context.java",
+        "start": 2,
+        "startLoc": {
+          "column": 20,
+          "line": 2,
+          "position": 22
+        }
+      },
+      "tokens": 26
+    },
+    {
+      "firstFile": {
+        "end": 550,
+        "endLoc": {
+          "column": 72,
+          "line": 550,
+          "position": 21846
+        },
+        "name": "RocksDBStore.java",
+        "start": 548,
+        "startLoc": {
+          "column": 8,
+          "line": 548,
+          "position": 21696
+        }
+      },
+      "format": "java",
+      "fragment": "        void addToBatch(final byte[] key,\n                        final byte[] value,\n                        final WriteBatch batch) throws RocksDBException;",
+      "lines": 3,
+      "secondFile": {
+        "end": 10,
+        "endLoc": {
+          "column": 73,
+          "line": 10,
+          "position": 445
+        },
+        "name": "hunk_1_full_del.java",
+        "start": 8,
+        "startLoc": {
+          "column": 9,
+          "line": 8,
+          "position": 293
+        }
+      },
+      "tokens": 22
+    },
+    {
+      "firstFile": {
+        "end": 671,
+        "endLoc": {
+          "column": 50,
+          "line": 671,
+          "position": 26402
+        },
+        "name": "RocksDBStore.java",
+        "start": 658,
+        "startLoc": {
+          "column": 12,
+          "line": 658,
+          "position": 25880
+        }
+      },
+      "format": "java",
+      "fragment": "            db.flush(fOptions, columnFamily);\n        }\n\n        @Override\n        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,\n                                           final WriteBatch batch) throws RocksDBException {\n            for (final KeyValue<byte[], byte[]> record : records) {\n                addToBatch(record.key, record.value, batch);\n            }\n        }\n\n        @Override\n        public void addToBatch(final byte[] key,\n                               final byte[] value,",
+      "lines": 14,
+      "secondFile": {
+        "end": 14,
+        "endLoc": {
+          "column": 51,
+          "line": 14,
+          "position": 540
+        },
+        "name": "hunk_2_deletions.java",
+        "start": 1,
+        "startLoc": {
+          "column": 13,
+          "line": 1,
+          "position": 13
+        }
+      },
+      "tokens": 90
+    },
+    {
+      "firstFile": {
+        "end": 663,
+        "endLoc": {
+          "column": 92,
+          "line": 663,
+          "position": 26130
+        },
+        "name": "RocksDBStore.java",
+        "start": 662,
+        "startLoc": {
+          "column": 8,
+          "line": 662,
+          "position": 25951
+        }
+      },
+      "format": "java",
+      "fragment": "        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,\n                                           final WriteBatch batch) throws RocksDBException {",
+      "lines": 2,
+      "secondFile": {
+        "end": 7,
+        "endLoc": {
+          "column": 91,
+          "line": 7,
+          "position": 333
+        },
+        "name": "hunk_2_full_del.java",
+        "start": 6,
+        "startLoc": {
+          "column": 9,
+          "line": 6,
+          "position": 155
+        }
+      },
+      "tokens": 27
+    },
+    {
+      "firstFile": {
+        "end": 697,
+        "endLoc": {
+          "column": 61,
+          "line": 697,
+          "position": 27231
+        },
+        "name": "RocksDBStore.java",
+        "start": 696,
+        "startLoc": {
+          "column": 56,
+          "line": 696,
+          "position": 27141
+        }
+      },
+      "format": "java",
+      "fragment": "        public void restoreAll(final Collection<KeyValue<byte[], byte[]>> records) {\n            try (final WriteBatch batch = new WriteBatch()) {",
+      "lines": 2,
+      "secondFile": {
+        "end": 3,
+        "endLoc": {
+          "column": 58,
+          "line": 3,
+          "position": 143
+        },
+        "name": "hunk_3_additions.java",
+        "start": 2,
+        "startLoc": {
+          "column": 54,
+          "line": 2,
+          "position": 56
+        }
+      },
+      "tokens": 25
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-04T10:06:18.933Z",
+    "formats": {
+      "java": {
+        "clones": 7,
+        "duplicatedLines": 31,
+        "duplicatedTokens": 266,
+        "lines": 850,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 3.6470588235294117,
+        "percentageTokens": 4.162754303599374,
+        "sources": 12,
+        "tokens": 6390
+      }
+    },
+    "total": {
+      "clones": 7,
+      "duplicatedLines": 31,
+      "duplicatedTokens": 266,
+      "lines": 850,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 3.6470588235294117,
+      "percentageTokens": 4.162754303599374,
+      "sources": 12,
+      "tokens": 6390
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotterTest.scala",
+                "start": 20,
+                "end": 26,
+                "startLoc": {
+                    "line": 20,
+                    "column": 0,
+                    "position": 834
+                },
+                "endLoc": {
+                    "line": 26,
+                    "column": 70,
+                    "position": 1130
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.scala",
+                "start": 1,
+                "end": 7,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 7,
+                    "column": 71,
+                    "position": 302
+                }
+            },
+            "format": "scala",
+            "fragment": "import java.nio.ByteBuffer\nimport java.util.Optional\nimport java.util.concurrent.{CompletableFuture, CountDownLatch}\n\nimport org.apache.kafka.common.memory.MemoryPool\nimport org.apache.kafka.common.protocol.ByteBufferAccessor\nimport org.apache.kafka.common.record.{CompressionType, MemoryRecords}",
+            "lines": 7,
+            "tokens": 64
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotterTest.scala",
+                "start": 49,
+                "end": 52,
+                "startLoc": {
+                    "line": 49,
+                    "column": 4,
+                    "position": 2013
+                },
+                "endLoc": {
+                    "line": 52,
+                    "column": 78,
+                    "position": 2270
+                }
+            },
+            "secondFile": {
+                "name": "hunk_3_deletions.scala",
+                "start": 2,
+                "end": 5,
+                "startLoc": {
+                    "line": 2,
+                    "column": 5,
+                    "position": 7
+                },
+                "endLoc": {
+                    "line": 5,
+                    "column": 79,
+                    "position": 266
+                }
+            },
+            "format": "scala",
+            "fragment": "    override def build(committedOffset: Long,\n                       committedEpoch: Int,\n                       lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion] = {\n      val offsetAndEpoch = new OffsetAndEpoch(committedOffset, committedEpoch)",
+            "lines": 4,
+            "tokens": 33
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 68,
+        "endLoc": {
+          "column": 9,
+          "line": 68,
+          "position": 3348
+        },
+        "name": "BrokerServer.scala",
+        "start": 61,
+        "startLoc": {
+          "column": 4,
+          "line": 61,
+          "position": 2948
+        }
+      },
+      "format": "scala",
+      "fragment": "    extends SnapshotWriterBuilder {\n  override def build(committedOffset: Long,\n                     committedEpoch: Int,\n                     lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion] = {\n    raftClient.createSnapshot(committedOffset, committedEpoch, lastContainedLogTime).\n        asScala.getOrElse(\n      throw new RuntimeException(\"A snapshot already exists with \" +\n        s\"committedOffset=${committedOffset}, committedEpoch=${committedEpoch}, \" +",
+      "lines": 8,
+      "secondFile": {
+        "end": 8,
+        "endLoc": {
+          "column": 9,
+          "line": 8,
+          "position": 407
+        },
+        "name": "hunk_1_deletions.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 5,
+          "line": 1,
+          "position": 5
+        }
+      },
+      "tokens": 48
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-24T19:35:22.855Z",
+    "formats": {
+      "scala": {
+        "clones": 1,
+        "duplicatedLines": 7,
+        "duplicatedTokens": 48,
+        "lines": 624,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 1.1217948717948718,
+        "percentageTokens": 0.9336704921221551,
+        "sources": 5,
+        "tokens": 5141
+      }
+    },
+    "total": {
+      "clones": 1,
+      "duplicatedLines": 7,
+      "duplicatedTokens": 48,
+      "lines": 624,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 1.1217948717948718,
+      "percentageTokens": 0.9336704921221551,
+      "sources": 5,
+      "tokens": 5141
+    }
+  }
+}

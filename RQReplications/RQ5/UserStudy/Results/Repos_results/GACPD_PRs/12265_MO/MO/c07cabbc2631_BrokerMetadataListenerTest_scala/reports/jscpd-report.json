@@ -1,0 +1,393 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 22,
+        "endLoc": {
+          "column": 40,
+          "line": 22,
+          "position": 942
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 18,
+        "startLoc": {
+          "column": 0,
+          "line": 18,
+          "position": 803
+        }
+      },
+      "format": "scala",
+      "fragment": "package kafka.server.metadata\n\nimport java.util\nimport java.util.concurrent.atomic.AtomicReference\nimport java.util.{Collections, Optional}",
+      "lines": 5,
+      "secondFile": {
+        "end": 4,
+        "endLoc": {
+          "column": 41,
+          "line": 4,
+          "position": 161
+        },
+        "name": "hunk_1_full_add.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 20,
+          "line": 1,
+          "position": 20
+        }
+      },
+      "tokens": 30
+    },
+    {
+      "firstFile": {
+        "end": 24,
+        "endLoc": {
+          "column": 31,
+          "line": 24,
+          "position": 975
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 20,
+        "startLoc": {
+          "column": 0,
+          "line": 20,
+          "position": 834
+        }
+      },
+      "format": "scala",
+      "fragment": "import java.util\nimport java.util.concurrent.atomic.AtomicReference\nimport java.util.{Collections, Optional}\n\nimport org.apache.kafka.common.{Endpoint, Uuid}",
+      "lines": 5,
+      "secondFile": {
+        "end": 4,
+        "endLoc": {
+          "column": 31,
+          "line": 4,
+          "position": 143
+        },
+        "name": "hunk_1_additions.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 33
+    },
+    {
+      "firstFile": {
+        "end": 24,
+        "endLoc": {
+          "column": 31,
+          "line": 24,
+          "position": 975
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 20,
+        "startLoc": {
+          "column": 0,
+          "line": 20,
+          "position": 834
+        }
+      },
+      "format": "scala",
+      "fragment": "import java.util\nimport java.util.concurrent.atomic.AtomicReference\nimport java.util.{Collections, Optional}\n\nimport org.apache.kafka.common.{Endpoint, Uuid}",
+      "lines": 5,
+      "secondFile": {
+        "end": 4,
+        "endLoc": {
+          "column": 32,
+          "line": 4,
+          "position": 144
+        },
+        "name": "hunk_1_context.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 33
+    },
+    {
+      "firstFile": {
+        "end": 24,
+        "endLoc": {
+          "column": 41,
+          "line": 24,
+          "position": 985
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 20,
+        "startLoc": {
+          "column": 0,
+          "line": 20,
+          "position": 834
+        }
+      },
+      "format": "scala",
+      "fragment": "import java.util\nimport java.util.concurrent.atomic.AtomicReference\nimport java.util.{Collections, Optional}\n\nimport org.apache.kafka.common.{Endpoint, Uuid}",
+      "lines": 5,
+      "secondFile": {
+        "end": 5,
+        "endLoc": {
+          "column": 41,
+          "line": 5,
+          "position": 154
+        },
+        "name": "hunk_1_deletions.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 36
+    },
+    {
+      "firstFile": {
+        "end": 25,
+        "endLoc": {
+          "column": 24,
+          "line": 25,
+          "position": 1016
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 24,
+        "startLoc": {
+          "column": 0,
+          "line": 24,
+          "position": 944
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.common.{Endpoint, Uuid}\nimport org.apache.kafka.common.metadata.{PartitionChangeRecord, PartitionRecord, RegisterBrokerRecord, TopicRecord}",
+      "lines": 2,
+      "secondFile": {
+        "end": 8,
+        "endLoc": {
+          "column": 25,
+          "line": 8,
+          "position": 413
+        },
+        "name": "hunk_1_additions.scala",
+        "start": 7,
+        "startLoc": {
+          "column": 1,
+          "line": 7,
+          "position": 340
+        }
+      },
+      "tokens": 21
+    },
+    {
+      "firstFile": {
+        "end": 26,
+        "endLoc": {
+          "column": 31,
+          "line": 26,
+          "position": 1139
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 24,
+        "startLoc": {
+          "column": 46,
+          "line": 24,
+          "position": 990
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.common.{Endpoint, Uuid}\nimport org.apache.kafka.common.metadata.{PartitionChangeRecord, PartitionRecord, RegisterBrokerRecord, TopicRecord}\nimport org.apache.kafka.common.utils.Time",
+      "lines": 3,
+      "secondFile": {
+        "end": 6,
+        "endLoc": {
+          "column": 32,
+          "line": 6,
+          "position": 261
+        },
+        "name": "hunk_1_deletions.scala",
+        "start": 3,
+        "startLoc": {
+          "column": 40,
+          "line": 3,
+          "position": 110
+        }
+      },
+      "tokens": 30
+    },
+    {
+      "firstFile": {
+        "end": 30,
+        "endLoc": {
+          "column": 54,
+          "line": 30,
+          "position": 1409
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 25,
+        "startLoc": {
+          "column": 0,
+          "line": 25,
+          "position": 992
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.common.metadata.{PartitionChangeRecord, PartitionRecord, RegisterBrokerRecord, TopicRecord}\nimport org.apache.kafka.common.utils.Time\nimport org.apache.kafka.image.{MetadataDelta, MetadataImage}\nimport org.apache.kafka.metadata.{BrokerRegistration, RecordTestUtils, VersionRange}\nimport org.apache.kafka.server.common.ApiMessageAndVersion\nimport org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}",
+      "lines": 6,
+      "secondFile": {
+        "end": 11,
+        "endLoc": {
+          "column": 85,
+          "line": 11,
+          "position": 568
+        },
+        "name": "hunk_1_full_del.scala",
+        "start": 6,
+        "startLoc": {
+          "column": 1,
+          "line": 6,
+          "position": 165
+        }
+      },
+      "tokens": 88
+    },
+    {
+      "firstFile": {
+        "end": 29,
+        "endLoc": {
+          "column": 38,
+          "line": 29,
+          "position": 1334
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 27,
+        "startLoc": {
+          "column": 0,
+          "line": 27,
+          "position": 1150
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.image.{MetadataDelta, MetadataImage}\nimport org.apache.kafka.metadata.{BrokerRegistration, RecordTestUtils, VersionRange}\nimport org.apache.kafka.server.common.ApiMessageAndVersion",
+      "lines": 3,
+      "secondFile": {
+        "end": 10,
+        "endLoc": {
+          "column": 38,
+          "line": 10,
+          "position": 574
+        },
+        "name": "hunk_1_additions.scala",
+        "start": 8,
+        "startLoc": {
+          "column": 1,
+          "line": 8,
+          "position": 389
+        }
+      },
+      "tokens": 41
+    },
+    {
+      "firstFile": {
+        "end": 31,
+        "endLoc": {
+          "column": 33,
+          "line": 31,
+          "position": 1455
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 29,
+        "startLoc": {
+          "column": 0,
+          "line": 29,
+          "position": 1296
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.server.common.ApiMessageAndVersion\nimport org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}\nimport org.junit.jupiter.api.Test",
+      "lines": 3,
+      "secondFile": {
+        "end": 14,
+        "endLoc": {
+          "column": 34,
+          "line": 14,
+          "position": 731
+        },
+        "name": "hunk_1_full_del.scala",
+        "start": 12,
+        "startLoc": {
+          "column": 1,
+          "line": 12,
+          "position": 570
+        }
+      },
+      "tokens": 38
+    },
+    {
+      "firstFile": {
+        "end": 31,
+        "endLoc": {
+          "column": 33,
+          "line": 31,
+          "position": 1455
+        },
+        "name": "BrokerMetadataListenerTest.scala",
+        "start": 30,
+        "startLoc": {
+          "column": 0,
+          "line": 30,
+          "position": 1355
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}\nimport org.junit.jupiter.api.Test",
+      "lines": 2,
+      "secondFile": {
+        "end": 12,
+        "endLoc": {
+          "column": 34,
+          "line": 12,
+          "position": 716
+        },
+        "name": "hunk_1_additions.scala",
+        "start": 11,
+        "startLoc": {
+          "column": 1,
+          "line": 11,
+          "position": 615
+        }
+      },
+      "tokens": 26
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-24T19:35:25.248Z",
+    "formats": {
+      "scala": {
+        "clones": 10,
+        "duplicatedLines": 29,
+        "duplicatedTokens": 376,
+        "lines": 436,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 6.651376146788992,
+        "percentageTokens": 9.92084432717678,
+        "sources": 10,
+        "tokens": 3790
+      }
+    },
+    "total": {
+      "clones": 10,
+      "duplicatedLines": 29,
+      "duplicatedTokens": 376,
+      "lines": 436,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 6.651376146788992,
+      "percentageTokens": 9.92084432717678,
+      "sources": 10,
+      "tokens": 3790
+    }
+  }
+}

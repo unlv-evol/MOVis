@@ -1,0 +1,69 @@
+{
+    "statistics": {
+        "formats": {
+            "scala": {
+                "clones": 1,
+                "duplicatedLines": 2,
+                "duplicatedTokens": 15,
+                "lines": 589,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 0.3395585738539898,
+                "percentageTokens": 0.30568575504381496,
+                "sources": 2,
+                "tokens": 4907
+            }
+        },
+        "detectionDate": "2026-09-24T19:35:22.576Z",
+        "total": {
+            "clones": 1,
+            "duplicatedLines": 2,
+            "duplicatedTokens": 15,
+            "lines": 589,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 0.3395585738539898,
+            "percentageTokens": 0.30568575504381496,
+            "sources": 2,
+            "tokens": 4907
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerServer.scala",
+                "start": 61,
+                "end": 63,
+                "startLoc": {
+                    "line": 61,
+                    "column": 4,
+                    "position": 2948
+                },
+                "endLoc": {
+                    "line": 63,
+                    "column": 41,
+                    "position": 3065
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 1,
+                "end": 3,
+                "startLoc": {
+                    "line": 1,
+                    "column": 5,
+                    "position": 5
+                },
+                "endLoc": {
+                    "line": 3,
+                    "column": 42,
+                    "position": 124
+                }
+            },
+            "format": "scala",
+            "fragment": "    extends SnapshotWriterBuilder {\n  override def build(committedOffset: Long,\n                     committedEpoch: Int,",
+            "lines": 3,
+            "tokens": 15
+        }
+    ]
+}

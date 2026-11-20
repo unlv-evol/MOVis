@@ -1,0 +1,41 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 27,
+                "end": 31,
+                "startLoc": {
+                    "line": 27,
+                    "column": 0,
+                    "position": 1150
+                },
+                "endLoc": {
+                    "line": 31,
+                    "column": 33,
+                    "position": 1455
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.scala",
+                "start": 9,
+                "end": 13,
+                "startLoc": {
+                    "line": 9,
+                    "column": 1,
+                    "position": 370
+                },
+                "endLoc": {
+                    "line": 13,
+                    "column": 34,
+                    "position": 678
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.apache.kafka.image.{MetadataDelta, MetadataImage}\nimport org.apache.kafka.metadata.{BrokerRegistration, RecordTestUtils, VersionRange}\nimport org.apache.kafka.server.common.ApiMessageAndVersion\nimport org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}\nimport org.junit.jupiter.api.Test",
+            "lines": 5,
+            "tokens": 68
+        }
+    ]
+}

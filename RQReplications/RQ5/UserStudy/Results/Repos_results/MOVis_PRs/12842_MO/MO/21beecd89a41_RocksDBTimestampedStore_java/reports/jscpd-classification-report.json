@@ -1,0 +1,77 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 261,
+                "end": 274,
+                "startLoc": {
+                    "line": 261,
+                    "column": 12,
+                    "position": 11839
+                },
+                "endLoc": {
+                    "line": 274,
+                    "column": 50,
+                    "position": 12364
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_deletions.java",
+                "start": 1,
+                "end": 14,
+                "startLoc": {
+                    "line": 1,
+                    "column": 13,
+                    "position": 13
+                },
+                "endLoc": {
+                    "line": 14,
+                    "column": 51,
+                    "position": 543
+                }
+            },
+            "format": "java",
+            "fragment": "            db.flush(fOptions, newColumnFamily);\n        }\n\n        @Override\n        public void prepareBatchForRestore(final Collection<KeyValue<byte[], byte[]>> records,\n                                           final WriteBatch batch) throws RocksDBException {\n            for (final KeyValue<byte[], byte[]> record : records) {\n                addToBatch(record.key, record.value, batch);\n            }\n        }\n\n        @Override\n        public void addToBatch(final byte[] key,\n                               final byte[] value,",
+            "lines": 14,
+            "tokens": 90
+        },
+        {
+            "firstFile": {
+                "name": "RocksDBTimestampedStore.java",
+                "start": 38,
+                "end": 43,
+                "startLoc": {
+                    "line": 38,
+                    "column": 0,
+                    "position": 1659
+                },
+                "endLoc": {
+                    "line": 43,
+                    "column": 40,
+                    "position": 1850
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.java",
+                "start": 2,
+                "end": 7,
+                "startLoc": {
+                    "line": 2,
+                    "column": 1,
+                    "position": 3
+                },
+                "endLoc": {
+                    "line": 7,
+                    "column": 41,
+                    "position": 198
+                }
+            },
+            "format": "java",
+            "fragment": "import java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.Collection;\nimport java.util.Comparator;\nimport java.util.List;\nimport java.util.NoSuchElementException;",
+            "lines": 6,
+            "tokens": 44
+        }
+    ]
+}

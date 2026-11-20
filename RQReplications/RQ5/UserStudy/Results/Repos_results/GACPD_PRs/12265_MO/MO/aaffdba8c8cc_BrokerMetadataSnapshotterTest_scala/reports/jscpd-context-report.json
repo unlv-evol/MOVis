@@ -1,0 +1,141 @@
+{
+    "statistics": {
+        "formats": {
+            "scala": {
+                "clones": 3,
+                "duplicatedLines": 12,
+                "duplicatedTokens": 109,
+                "lines": 127,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 9.448818897637794,
+                "percentageTokens": 7.055016181229773,
+                "sources": 5,
+                "tokens": 1545
+            }
+        },
+        "detectionDate": "2026-09-24T19:35:25.493Z",
+        "total": {
+            "clones": 3,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 109,
+            "lines": 127,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 9.448818897637794,
+            "percentageTokens": 7.055016181229773,
+            "sources": 5,
+            "tokens": 1545
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotterTest.scala",
+                "start": 20,
+                "end": 26,
+                "startLoc": {
+                    "line": 20,
+                    "column": 0,
+                    "position": 834
+                },
+                "endLoc": {
+                    "line": 26,
+                    "column": 70,
+                    "position": 1130
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 1,
+                "end": 6,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 71,
+                    "position": 301
+                }
+            },
+            "format": "scala",
+            "fragment": "import java.nio.ByteBuffer\nimport java.util.Optional\nimport java.util.concurrent.{CompletableFuture, CountDownLatch}\n\nimport org.apache.kafka.common.memory.MemoryPool\nimport org.apache.kafka.common.protocol.ByteBufferAccessor\nimport org.apache.kafka.common.record.{CompressionType, MemoryRecords}",
+            "lines": 7,
+            "tokens": 64
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotterTest.scala",
+                "start": 34,
+                "end": 39,
+                "startLoc": {
+                    "line": 34,
+                    "column": 0,
+                    "position": 1523
+                },
+                "endLoc": {
+                    "line": 39,
+                    "column": 7,
+                    "position": 1684
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.scala",
+                "start": 1,
+                "end": 6,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 8,
+                    "position": 167
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}\nimport org.junit.jupiter.api.Test\n\n\nclass BrokerMetadataSnapshotterTest {\n  @Test",
+            "lines": 6,
+            "tokens": 33
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotterTest.scala",
+                "start": 49,
+                "end": 50,
+                "startLoc": {
+                    "line": 49,
+                    "column": 4,
+                    "position": 2013
+                },
+                "endLoc": {
+                    "line": 50,
+                    "column": 43,
+                    "position": 2098
+                }
+            },
+            "secondFile": {
+                "name": "hunk_3_context.scala",
+                "start": 2,
+                "end": 3,
+                "startLoc": {
+                    "line": 2,
+                    "column": 5,
+                    "position": 7
+                },
+                "endLoc": {
+                    "line": 3,
+                    "column": 44,
+                    "position": 93
+                }
+            },
+            "format": "scala",
+            "fragment": "    override def build(committedOffset: Long,\n                       committedEpoch: Int,",
+            "lines": 2,
+            "tokens": 12
+        }
+    ]
+}

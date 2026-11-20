@@ -12,6 +12,7 @@ QString normalizePrPath(const QString& basePath, const QString& filePath);
 bool obtainRepositoryPath(const QString& baseFolder, QString& fileAbsolute, QString& finalRepoPath);
 QStringList scanFilesUnderPath(const QString& baseFolder, const QString& mainFilePath);
 QStringList scallAllFilesInCmp(const QString &root, const QString &pr, const QString &classification);
+QStringList scanIndividualResultFiles(const QString &root, const QString &pr, const QString &classification, const QString &fileClassification);
 QString buildDirWithPRAndClassification(const QString &root, const QString &pr, const QString &cls);
 
 #endif // PRHELPERS_H

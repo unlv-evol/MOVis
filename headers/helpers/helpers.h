@@ -10,7 +10,7 @@
 QStringList sortedSet(const QSet<QString>& set);
 QColor colorSelection(int i);
 void computeRangeFromDup(const QJsonObject &fileObj, int linesTotal,
-                         int &startLine, int &startCol, int &endLine, int &endCol, bool isLeft);
+                         int &startLine, int &startCol, int &endLine, int &endCol, int lineOffset = 0);
 int suffixRank(const QString& suffix);
 bool compareHunkPaths(const QString& leftPath,
                              const QString& rightPath,

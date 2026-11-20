@@ -1,11 +1,11 @@
 # MOVis: Replication Package
 
 [![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](./LICENSE)
-[![Conference](https://img.shields.io/badge/ASE-2026-blue.svg)](#)
+<!-- [![Conference](https://img.shields.io/badge/ASE-2026-blue.svg)](#)
 [![Artifact Type](https://img.shields.io/badge/Artifact-Tool%20Demo-orange.svg)](#)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18356553.svg)](https://doi.org/10.5281/zenodo.18356553)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://doi.org/10.5281/zenodo.18356553/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://doi.org/10.5281/zenodo.18356553)
-[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648/)](https://archive.softwareheritage.org/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648;origin=https://doi.org/10.5281/zenodo.18356553;visit=swh:1:snp:27266f32ac9c8d3edb2c71f0a40ec42c5175e7c5;anchor=swh:1:rel:1c8af992cf5f2031d820aa4ed18adeaf7070ae50;path=/unlv-evol-MOVis-1f4ba0f/)
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648/)](https://archive.softwareheritage.org/swh:1:dir:ca11f27d060fb7bfe119d859acdd93c355920648;origin=https://doi.org/10.5281/zenodo.18356553;visit=swh:1:snp:27266f32ac9c8d3edb2c71f0a40ec42c5175e7c5;anchor=swh:1:rel:1c8af992cf5f2031d820aa4ed18adeaf7070ae50;path=/unlv-evol-MOVis-1f4ba0f/) -->
 
 This repository contains the **replication package** for the FSE 2026 Tool Demonstration paper:
 
@@ -57,26 +57,22 @@ MOVis/
 ├── MOVis.pro               # Qt project configuration file
 ├── LICENSE                 # Project license
 ├── README.md               # Project overview and usage instructions
-├── Pareco/                 # Analysis and data-processing backend
-│   ├── Methods/            # Core analysis modules (patch extraction, loading, metrics)
-│   ├── NewPaReco/          # Refactored and extended analysis components
-│   └── ...                 # Additional backend utilities and modules
-├── src/                    # Qt/C++ source files for the MOVis GUI
+├── src/                    # Qt/C++ source files for the MOVis GUI and GACPD execution
+├── src/                    # QML source files for MOVis GUI
 ├── forms/                  # Qt Designer (.ui) files
 ├── assets/                 # Icons, images, and UI assets
 ├── headers/                # C/C++ header files
 ├── include/                # Shared include files and third-party headers
 ├── logs/                   # Runtime and analysis logs
 ├── scripts/                # Helper scripts (build, analysis, data preparation)
-├── release/                # Compiled binaries or intermediate build artifacts
-├── docker/                 # Dockerfiles and container configuration
+├── tools/                  # node tools needed to execute JSCPD per OS
+├── RQReplications/         # Code needed to replicate the results of each of our RQs
 └── .gitignore              # Git ignore rules
 ```
 
 **Key components**:
 
 * **Qt-based GUI (C++)**: Interactive visualization of software variants and missed patches
-* **PaReco backend (Python)**: Patch extraction, commit loading, and analysis logic
 
 ---
 
@@ -96,10 +92,7 @@ MOVis/
 ### Software Dependencies
 
 * **Qt 6.10.1**
-* **Python 3.12**
-* `pip` (Python dependency management)
 * Git
-* NPM
 * Docker
 * Linux only: `mesa-common-dev`, `libgl1-mesa-dev`
 
@@ -207,7 +200,7 @@ Here is a step to step guide:
 (5) Click "Configure Project"
 
 You may now run MOVis via Debug or Release form. 
-> **Note**: Docker support is provided for users who prefer a containerized setup. Qt is not installed on the set up but MOVis may still be used.
+<!-- > **Note**: Docker support is provided for users who prefer a containerized setup. Qt is not installed on the set up but MOVis may still be used. -->
 
 ---
 

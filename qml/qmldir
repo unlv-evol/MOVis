@@ -1,0 +1,2 @@
+# Makes Theme available as a singleton to every .qml file in this directory.
+singleton Theme 1.0 Theme.qml

@@ -1,0 +1,357 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 22,
+        "endLoc": {
+          "column": 63,
+          "line": 22,
+          "position": 950
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 18,
+        "startLoc": {
+          "column": 0,
+          "line": 18,
+          "position": 803
+        }
+      },
+      "format": "scala",
+      "fragment": "package kafka.server.metadata\n\nimport java.nio.ByteBuffer\nimport java.util.Optional\nimport java.util.concurrent.{CompletableFuture, CountDownLatch}",
+      "lines": 5,
+      "secondFile": {
+        "end": 4,
+        "endLoc": {
+          "column": 64,
+          "line": 4,
+          "position": 167
+        },
+        "name": "hunk_1_full_del.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 18,
+          "line": 1,
+          "position": 18
+        }
+      },
+      "tokens": 30
+    },
+    {
+      "firstFile": {
+        "end": 26,
+        "endLoc": {
+          "column": 70,
+          "line": 26,
+          "position": 1130
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 20,
+        "startLoc": {
+          "column": 0,
+          "line": 20,
+          "position": 834
+        }
+      },
+      "format": "scala",
+      "fragment": "import java.nio.ByteBuffer\nimport java.util.Optional\nimport java.util.concurrent.{CompletableFuture, CountDownLatch}\n\nimport org.apache.kafka.common.memory.MemoryPool\nimport org.apache.kafka.common.protocol.ByteBufferAccessor\nimport org.apache.kafka.common.record.{CompressionType, MemoryRecords}",
+      "lines": 7,
+      "secondFile": {
+        "end": 6,
+        "endLoc": {
+          "column": 71,
+          "line": 6,
+          "position": 301
+        },
+        "name": "hunk_1_context.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 64
+    },
+    {
+      "firstFile": {
+        "end": 26,
+        "endLoc": {
+          "column": 70,
+          "line": 26,
+          "position": 1130
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 20,
+        "startLoc": {
+          "column": 0,
+          "line": 20,
+          "position": 834
+        }
+      },
+      "format": "scala",
+      "fragment": "import java.nio.ByteBuffer\nimport java.util.Optional\nimport java.util.concurrent.{CompletableFuture, CountDownLatch}\n\nimport org.apache.kafka.common.memory.MemoryPool\nimport org.apache.kafka.common.protocol.ByteBufferAccessor\nimport org.apache.kafka.common.record.{CompressionType, MemoryRecords}",
+      "lines": 7,
+      "secondFile": {
+        "end": 7,
+        "endLoc": {
+          "column": 71,
+          "line": 7,
+          "position": 302
+        },
+        "name": "hunk_1_deletions.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 64
+    },
+    {
+      "firstFile": {
+        "end": 26,
+        "endLoc": {
+          "column": 70,
+          "line": 26,
+          "position": 1130
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 24,
+        "startLoc": {
+          "column": 0,
+          "line": 24,
+          "position": 952
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.apache.kafka.common.memory.MemoryPool\nimport org.apache.kafka.common.protocol.ByteBufferAccessor\nimport org.apache.kafka.common.record.{CompressionType, MemoryRecords}",
+      "lines": 3,
+      "secondFile": {
+        "end": 8,
+        "endLoc": {
+          "column": 71,
+          "line": 8,
+          "position": 351
+        },
+        "name": "hunk_1_full_del.scala",
+        "start": 6,
+        "startLoc": {
+          "column": 1,
+          "line": 6,
+          "position": 171
+        }
+      },
+      "tokens": 40
+    },
+    {
+      "firstFile": {
+        "end": 35,
+        "endLoc": {
+          "column": 33,
+          "line": 35,
+          "position": 1636
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 34,
+        "startLoc": {
+          "column": 0,
+          "line": 34,
+          "position": 1523
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}\nimport org.junit.jupiter.api.Test",
+      "lines": 2,
+      "secondFile": {
+        "end": 2,
+        "endLoc": {
+          "column": 34,
+          "line": 2,
+          "position": 115
+        },
+        "name": "hunk_2_additions.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 28
+    },
+    {
+      "firstFile": {
+        "end": 39,
+        "endLoc": {
+          "column": 7,
+          "line": 39,
+          "position": 1684
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 34,
+        "startLoc": {
+          "column": 0,
+          "line": 34,
+          "position": 1523
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}\nimport org.junit.jupiter.api.Test\n\n\nclass BrokerMetadataSnapshotterTest {\n  @Test",
+      "lines": 6,
+      "secondFile": {
+        "end": 6,
+        "endLoc": {
+          "column": 8,
+          "line": 6,
+          "position": 167
+        },
+        "name": "hunk_2_context.scala",
+        "start": 1,
+        "startLoc": {
+          "column": 1,
+          "line": 1,
+          "position": 1
+        }
+      },
+      "tokens": 33
+    },
+    {
+      "firstFile": {
+        "end": 35,
+        "endLoc": {
+          "column": 33,
+          "line": 35,
+          "position": 1636
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 34,
+        "startLoc": {
+          "column": 0,
+          "line": 34,
+          "position": 1523
+        }
+      },
+      "format": "scala",
+      "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}\nimport org.junit.jupiter.api.Test",
+      "lines": 2,
+      "secondFile": {
+        "end": 3,
+        "endLoc": {
+          "column": 34,
+          "line": 3,
+          "position": 213
+        },
+        "name": "hunk_2_full_add.scala",
+        "start": 2,
+        "startLoc": {
+          "column": 1,
+          "line": 2,
+          "position": 99
+        }
+      },
+      "tokens": 28
+    },
+    {
+      "firstFile": {
+        "end": 52,
+        "endLoc": {
+          "column": 78,
+          "line": 52,
+          "position": 2270
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 49,
+        "startLoc": {
+          "column": 4,
+          "line": 49,
+          "position": 2013
+        }
+      },
+      "format": "scala",
+      "fragment": "    override def build(committedOffset: Long,\n                       committedEpoch: Int,\n                       lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion] = {\n      val offsetAndEpoch = new OffsetAndEpoch(committedOffset, committedEpoch)",
+      "lines": 4,
+      "secondFile": {
+        "end": 5,
+        "endLoc": {
+          "column": 79,
+          "line": 5,
+          "position": 266
+        },
+        "name": "hunk_3_deletions.scala",
+        "start": 2,
+        "startLoc": {
+          "column": 5,
+          "line": 2,
+          "position": 7
+        }
+      },
+      "tokens": 33
+    },
+    {
+      "firstFile": {
+        "end": 54,
+        "endLoc": {
+          "column": 22,
+          "line": 54,
+          "position": 2332
+        },
+        "name": "BrokerMetadataSnapshotterTest.scala",
+        "start": 51,
+        "startLoc": {
+          "column": 23,
+          "line": 51,
+          "position": 2122
+        }
+      },
+      "format": "scala",
+      "fragment": "                       lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion] = {\n      val offsetAndEpoch = new OffsetAndEpoch(committedOffset, committedEpoch)\n      SnapshotWriter.createWithHeader(\n        () => Optional.of(new MockRawSnapshotWriter(offsetAndEpoch, consumeSnapshotBuffer)),",
+      "lines": 4,
+      "secondFile": {
+        "end": 8,
+        "endLoc": {
+          "column": 16,
+          "line": 8,
+          "position": 387
+        },
+        "name": "hunk_3_full_del.scala",
+        "start": 5,
+        "startLoc": {
+          "column": 24,
+          "line": 5,
+          "position": 174
+        }
+      },
+      "tokens": 30
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-09-24T19:35:26.066Z",
+    "formats": {
+      "scala": {
+        "clones": 9,
+        "duplicatedLines": 31,
+        "duplicatedTokens": 350,
+        "lines": 217,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 14.285714285714285,
+        "percentageTokens": 16.047684548372306,
+        "sources": 17,
+        "tokens": 2181
+      }
+    },
+    "total": {
+      "clones": 9,
+      "duplicatedLines": 31,
+      "duplicatedTokens": 350,
+      "lines": 217,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 14.285714285714285,
+      "percentageTokens": 16.047684548372306,
+      "sources": 17,
+      "tokens": 2181
+    }
+  }
+}

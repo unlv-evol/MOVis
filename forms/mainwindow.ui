@@ -14,65 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineText">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>90</y>
-      <width>131</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnSubmit">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>120</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Submit</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Source Variant</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineText_2">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>90</y>
-      <width>151</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>70</y>
-      <width>131</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Target Variant</string>
-    </property>
-   </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
@@ -86,7 +27,7 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>440</x>
       <y>30</y>
       <width>91</width>
       <height>16</height>
@@ -96,23 +37,10 @@
      <string>Token List</string>
     </property>
    </widget>
-   <widget class="QLabel" name="imageLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>230</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnExtra">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>530</y>
       <width>141</width>
       <height>24</height>
@@ -126,30 +54,17 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>40</y>
+      <y>30</y>
       <width>131</width>
       <height>24</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Results Folder Name</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="oldResults">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>40</y>
+      <x>190</x>
+      <y>30</y>
       <width>151</width>
       <height>24</height>
      </rect>
@@ -171,86 +86,431 @@
      <string>Hide</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="divDateButton">
+   <widget class="QStackedWidget" name="formSelector">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>371</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Normal">
+     <widget class="QGroupBox" name="dateBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>341</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Date Information</string>
+      </property>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>131</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="displayFormat">
+        <string>M/d/yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Divergence Date</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateInput">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>40</y>
+         <width>131</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="displayFormat">
+        <string>M/d/yyyy</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>20</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cut-Off Date</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>130</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Source Repository</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineText">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>131</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="divDateButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>131</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Get Divergence Date</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Variant Repository</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineText_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSubmit">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>50</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="generateApiJsonNormal">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate API Json File</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="fetchPrCommitListNormal">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>195</y>
+        <width>331</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fetch PRs Commit List</string>
+      </property>
+      <property name="toolTip">
+       <string>Fetch each PR commit list. PRs over 250 commits automatically use the GraphQL path.</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="imageLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>225</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="onePr">
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>130</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Source Repository</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineText_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>131</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Variant Repository</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineText_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSubmit_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>50</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Source PR Number</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="generateApiJsonOnePr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate API Json File</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="fetchPrCommitListOnePr">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>135</y>
+        <width>331</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fetch PRs Commit List</string>
+      </property>
+      <property name="toolTip">
+       <string>Fetch each PR commit list. PRs over 250 commits automatically use the GraphQL path.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="dataSet">
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Source Repositories</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>171</width>
+        <height>291</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>10</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Variant Repositories</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>161</width>
+        <height>291</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>271</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Run Again with Source and Variants Flipped</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="generateApiJsonDataset">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>360</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate API Json File</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="fetchPrCommitListDataset">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>385</y>
+        <width>331</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fetch PRs Commit List</string>
+      </property>
+      <property name="toolTip">
+       <string>Fetch each PR commit list. PRs over 250 commits automatically use the GraphQL path.</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSubmit_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>420</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>120</y>
-      <width>131</width>
-      <height>24</height>
+      <y>10</y>
+      <width>111</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Get Divergence Date</string>
+     <string>Root Folder Name</string>
     </property>
-   </widget>
-   <widget class="QGroupBox" name="dateBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>150</y>
-      <width>341</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Date Information</string>
-    </property>
-    <widget class="QDateEdit" name="dateEdit">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>131</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="displayFormat">
-      <string>M/d/yyyy</string>
-     </property>
-     <property name="calendarPopup">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Initial Date &amp; Time</string>
-     </property>
-    </widget>
-    <widget class="QDateEdit" name="dateInput">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>40</y>
-       <width>131</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="displayFormat">
-      <string>M/d/yyyy</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>20</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Divergence Date &amp; Time</string>
-     </property>
-    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -259,11 +519,44 @@
      <x>0</x>
      <y>0</y>
      <width>791</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuDependencies">
+    <property name="title">
+     <string>Dependencies</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuNormal">
+    <property name="title">
+     <string>Normal</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuOne_Pr">
+    <property name="title">
+     <string>One Pr</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuDatasets">
+    <property name="title">
+     <string>Datasets</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuNormal"/>
+   <addaction name="menuOne_Pr"/>
+   <addaction name="menuDatasets"/>
+   <addaction name="menuDependencies"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTBA">
+   <property name="text">
+    <string>TBA</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

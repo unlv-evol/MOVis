@@ -1,0 +1,770 @@
+question_no,question,word,count
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",MOVis,7
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",code,3
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",click,2
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",already,2
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",highlighted,2
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",biggest,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",self,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",contained,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",client,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",application,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",need,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",multiple,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",windows,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",opened,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",visualizer,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",give,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",liked,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",intuitive,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",assuming,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",accurate,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",part,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",difference,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",tool,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",helped,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",alot,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",tools,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",struggled,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",identify,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",actual,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",buggy,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",see,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",PaReco,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",similar,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",good,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",results,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",tied,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",best,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",color-coded,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",shows,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",variant,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",target,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",side-by-side,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",view,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",different,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",file,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",examine,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",quickly,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",UI,1
+1,"Which system made it easiest to locate the corresponding buggy region in the target, and why?",splitted,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,MOVis,9
+2,Can you describe the steps you followed to locate the buggy region when using each system?,files,8
+2,Can you describe the steps you followed to locate the buggy region when using each system?,PaReco,7
+2,Can you describe the steps you followed to locate the buggy region when using each system?,PR,7
+2,Can you describe the steps you followed to locate the buggy region when using each system?,repo,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,similar,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,GACPD,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,file,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,code,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,looked,6
+2,Can you describe the steps you followed to locate the buggy region when using each system?,looking,5
+2,Can you describe the steps you followed to locate the buggy region when using each system?,results,5
+2,Can you describe the steps you followed to locate the buggy region when using each system?,opened,4
+2,Can you describe the steps you followed to locate the buggy region when using each system?,used,4
+2,Can you describe the steps you followed to locate the buggy region when using each system?,provided,4
+2,Can you describe the steps you followed to locate the buggy region when using each system?,HTML,4
+2,Can you describe the steps you followed to locate the buggy region when using each system?,MO,4
+2,Can you describe the steps you followed to locate the buggy region when using each system?,two,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,report,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,based,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,buggy,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,open,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,hunks,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,highlighted,3
+2,Can you describe the steps you followed to locate the buggy region when using each system?,easy,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,manually,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,checked,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,difference,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,directory,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,many,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,region,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,verify,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,alot,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,intuitive,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,steps,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,tried,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,changed,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,look,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,variant,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,multiple,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,effort,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,tool,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,see,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,implementation,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,determined,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,loaded,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,already,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,MOs,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,made,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,page,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,comparing,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,web,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,familiar,2
+2,Can you describe the steps you followed to locate the buggy region when using each system?,given,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,number,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,enough,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,dropdown,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,popped,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,versions,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,windows,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,side-by-side,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,read,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,line,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,ensure,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,somewhat,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,gave,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,convenient,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,navigated,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,folder,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,name,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,found,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,identified,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,mess,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,traversal,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,fast,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,due,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,rather,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,know,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,advantage,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,visually,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,ideal,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,world,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,trust,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,time,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,that'd,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,best,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,use,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,idea,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,back,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,bother,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,trial,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,error,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,headache,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,pay,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,someone,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,click,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,color,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,bunch,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,ctrl,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,right,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,opening,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,shared,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,try,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,locate,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,difficult,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,straightforward,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,task,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,related,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,different,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,clicked,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,show,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,regions,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,summary,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,table,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,kinder,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,picking,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,required,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,source,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,panel,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,select,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,filters,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,left,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,side,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,screen,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,detect,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,fixed,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,patch,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,data,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,GitHub,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,edited,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,section,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,shows,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,per,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,target,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,viseversa,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,unless,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,corresponding,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,output,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,vise,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,versa,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,reason,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,pinned,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,taskbar,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,test,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,link,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,compare,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,ran,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,specified,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,json,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,view,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,might,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,navigate,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,several,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,directories,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,search,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,compared,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,suspected,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,current,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,manual,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,system,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,believe,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,using,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,pages,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,find,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,little,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,hard,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,font,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,size,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,feel,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,practically,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,past,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,searching,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,changes,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,often,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,prefer,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,become,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,developers,1
+2,Can you describe the steps you followed to locate the buggy region when using each system?,worked,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",PaReco,7
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",required,5
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",manual,3
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",effort,3
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",looking,3
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",two,2
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",use,2
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",GACPD,2
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",largely,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",repos,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",party,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",instead,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",contained,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",client,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",look,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",directory,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",work,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",file,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",destinations,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",alot,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",end,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",exactly,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",variant,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",base,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",manually,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",ensure,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",right,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",address,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",repository,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",classify,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",relies,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",user,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",nothing,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",automated,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",little,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",within,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",different,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",page,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",hard,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",focus,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",miss,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",missing,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",forever,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",debugging,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",art,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",analyzing,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",code,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",changes,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",requires,1
+3,"Which system required more manual effort, such as searching, scrolling, or matching code fragments? Why?",time,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,MOVis,7
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,see,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,side-by-side,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,side,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,GACPD,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,feel,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,confident,2
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,deletions,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,within,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,page,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,small,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,assume,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,accuracy,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,good,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,highlighted,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,presentation,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,results,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,highlighting,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,code,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,segments,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,changed,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,offered,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,clues,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,insights,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,select,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,shows,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,color,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,coded,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,file,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,corresponding,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,target,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,variant,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,classifies,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,determines,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,hunks,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,similar,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,didtn,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,require,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,look,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,deeply,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,codebase,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,PaReco,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,knew,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,behind,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,scenes,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,mention,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,understood,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,works,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,compared,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,files,1
+4,With which system did you feel most confident that you had found the correct location? What contributed to that confidence?,view,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",PaReco,4
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",felt,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",unsure,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",confident,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",files,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",find,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",uncertain,2
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",navigating,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",thinking,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",understood,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",tool,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",work,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",general,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",ask,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",questions,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",stuff,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",often,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",time,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",degree,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",fully,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",based,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",examples,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",given,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",feel,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",bunch,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",missed,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",opportunity,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",PRs,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",using,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",GACPD,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",staringforward,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",experience,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",wondered,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",point,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",whether,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",right,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",try,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",matching,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",repositories,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",base,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",variant,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",easy,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",task,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",struggled,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",locate,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",found,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",exactly,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",patch,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",part,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",code,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",necessarily,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",match,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",held,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",similar,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",semantic,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",structure,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",check,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",path,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",straight,1
+5,"At any point, did you feel uncertain about whether you had found the correct location? If so, when and why?",forward,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,changes,3
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,side-by-side,3
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,view,3
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,hand,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,side,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,click,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,color,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,coding,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,file,2
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,fact,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,linked,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,together,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,mean,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,left,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,src,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,right,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,someone,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,proficient,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,area,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,know,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,change,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,context,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,intuitive,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,jump,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,highlighting,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,code,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,segments,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,changed,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,presentation,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,files,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,repos,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,shows,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,significant,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,divergence,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,easier,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,follow,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,along,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,patch,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,needed,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,immensely,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,helpful,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,easily,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,UI,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,evaluated,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,easy,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,although,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,quick,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,finding,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,prefer,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,become,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,familiar,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,understand,1
+6,What aspects of MOVis helped you understand the relationship between the source patch and the target code?,made,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",UI,2
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",intuitive,2
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",use,2
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",color,2
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",MOVis,2
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",struggles,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",intention,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",software,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",mainly,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",understanding,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",backend,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",work,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",run,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",scratch,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",nope,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",clear,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",tool,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",although,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",knew,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",source,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",target,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",variants,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",shown,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",side-by-side,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",confirm,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",looking,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",corresponding,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",section,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",coding,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",coded,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",part,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",represented,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",classification,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",somewhere,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",impatient,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",take,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",time,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",look,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",unclear,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",parts,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",buttons,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",meant,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",recall,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",knowing,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",specifically,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",directory,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",load,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",might,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",related,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",instructions,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",given,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",three,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",systems,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",none,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",clicking,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",folder,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",instead,1
+7,"Were there any parts of MOVis that were confusing, unclear, or difficult to use?",PR,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,view,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,using,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,done,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,made,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,good,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,side-by-side,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,developers,2
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,helpful,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,nice,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,correlation,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,allows,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,everything,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,jumping,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,around,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,useful,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,prefer,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,options,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,PaReco,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,GACPD,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,better,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,although,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,repeated,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,use,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,needed,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,fully,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,adjust,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,MOVis,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,easier,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,determin,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,application,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,PR,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,already,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,target,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,mentioned,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,previously,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,ability,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,locate,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,understand,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,corresponding,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,buggy,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,region,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,faster,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,two,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,systems,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,novel,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,feature,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,helps,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,often,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,different,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,preferences,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,perhaps,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,familiar,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,allowing,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,change,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,default,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,settings,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,starting,1
+8,How did the side-by-side view of source and target code in MOVis affect your ability to locate and understand the corresponding buggy region?,point,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",hunks,5
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",prefer,5
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",hunk,5
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",know,3
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",code,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",problem,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",found,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",easier,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",shown,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",duplicate,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",changes,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",made,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",see,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",time,2
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",filter,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",assuming,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",reliable,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",helpful,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",MOVis,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",many,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",however,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",pre-experimental,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",example,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",read,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",source,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",sequential,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",scroll,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",whichever,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",displayed,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",matter,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",target,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",separately,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",option,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",show,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",simultaneously,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",individually,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",allows,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",focus,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",distracted,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",sections,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",definitely,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",adds,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",confusion,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",another,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",simply,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",line,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",regarding,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",library,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",addition,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",seamless,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",check,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",multiple,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",areas,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",potential,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",MOs,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",kinda,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",easy,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",inspect,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",ability,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",select,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",individual,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",instead,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",seeing,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",file,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",always,1
+9,"MOVis displays all hunks at once instead of using a combo box for selection. How did this design affect your ability to navigate and inspect the changes? Which approach did you prefer, and why?",correlate,1
+10,"Overall, which system would you prefer to use for this task, and why?",MOVis,8
+10,"Overall, which system would you prefer to use for this task, and why?",view,2
+10,"Overall, which system would you prefer to use for this task, and why?",code,2
+10,"Overall, which system would you prefer to use for this task, and why?",prefer,2
+10,"Overall, which system would you prefer to use for this task, and why?",use,2
+10,"Overall, which system would you prefer to use for this task, and why?",GitHub,2
+10,"Overall, which system would you prefer to use for this task, and why?",time,2
+10,"Overall, which system would you prefer to use for this task, and why?",side-by-side,1
+10,"Overall, which system would you prefer to use for this task, and why?",require,1
+10,"Overall, which system would you prefer to use for this task, and why?",extra,1
+10,"Overall, which system would you prefer to use for this task, and why?",program,1
+10,"Overall, which system would you prefer to use for this task, and why?",advange,1
+10,"Overall, which system would you prefer to use for this task, and why?",now,1
+10,"Overall, which system would you prefer to use for this task, and why?",know,1
+10,"Overall, which system would you prefer to use for this task, and why?",accuracy,1
+10,"Overall, which system would you prefer to use for this task, and why?",GACPD,1
+10,"Overall, which system would you prefer to use for this task, and why?",would've,1
+10,"Overall, which system would you prefer to use for this task, and why?",preferred,1
+10,"Overall, which system would you prefer to use for this task, and why?",faster,1
+10,"Overall, which system would you prefer to use for this task, and why?",intuitive,1
+10,"Overall, which system would you prefer to use for this task, and why?",files,1
+10,"Overall, which system would you prefer to use for this task, and why?",seeing,1
+10,"Overall, which system would you prefer to use for this task, and why?",easier,1
+10,"Overall, which system would you prefer to use for this task, and why?",locate,1
+10,"Overall, which system would you prefer to use for this task, and why?",MOs,1
+10,"Overall, which system would you prefer to use for this task, and why?",identify,1
+10,"Overall, which system would you prefer to use for this task, and why?",visualise,1
+10,"Overall, which system would you prefer to use for this task, and why?",aspects,1
+10,"Overall, which system would you prefer to use for this task, and why?",changed,1
+10,"Overall, which system would you prefer to use for this task, and why?",detect,1
+10,"Overall, which system would you prefer to use for this task, and why?",patches,1
+10,"Overall, which system would you prefer to use for this task, and why?",source,1
+10,"Overall, which system would you prefer to use for this task, and why?",PR,1
+10,"Overall, which system would you prefer to use for this task, and why?",viewing,1
+10,"Overall, which system would you prefer to use for this task, and why?",viewer,1
+10,"Overall, which system would you prefer to use for this task, and why?",definitely,1
+10,"Overall, which system would you prefer to use for this task, and why?",quickest,1
+10,"Overall, which system would you prefer to use for this task, and why?",shows,1
+10,"Overall, which system would you prefer to use for this task, and why?",weather,1
+10,"Overall, which system would you prefer to use for this task, and why?",implementation,1
+10,"Overall, which system would you prefer to use for this task, and why?",already,1
+10,"Overall, which system would you prefer to use for this task, and why?",done,1
+10,"Overall, which system would you prefer to use for this task, and why?",target,1
+10,"Overall, which system would you prefer to use for this task, and why?",without,1
+10,"Overall, which system would you prefer to use for this task, and why?",manually,1
+10,"Overall, which system would you prefer to use for this task, and why?",find,1
+10,"Overall, which system would you prefer to use for this task, and why?",genuinely,1
+10,"Overall, which system would you prefer to use for this task, and why?",perform,1
+10,"Overall, which system would you prefer to use for this task, and why?",task,1
+10,"Overall, which system would you prefer to use for this task, and why?",frequently,1
+10,"Overall, which system would you prefer to use for this task, and why?",condensed,1
+10,"Overall, which system would you prefer to use for this task, and why?",amount,1
+10,"Overall, which system would you prefer to use for this task, and why?",needed,1
+10,"Overall, which system would you prefer to use for this task, and why?",understood,1
+10,"Overall, which system would you prefer to use for this task, and why?",everything,1
+10,"Overall, which system would you prefer to use for this task, and why?",tool,1
+10,"Overall, which system would you prefer to use for this task, and why?",used,1
+10,"Overall, which system would you prefer to use for this task, and why?",often,1
+10,"Overall, which system would you prefer to use for this task, and why?",overall,1
+10,"Overall, which system would you prefer to use for this task, and why?",spot,1
+10,"Overall, which system would you prefer to use for this task, and why?",fix,1
+10,"Overall, which system would you prefer to use for this task, and why?",comparisons,1
+10,"Overall, which system would you prefer to use for this task, and why?",greatly,1
+10,"Overall, which system would you prefer to use for this task, and why?",accelerated,1
+10,"Overall, which system would you prefer to use for this task, and why?",plus,1
+10,"Overall, which system would you prefer to use for this task, and why?",anyone,1
+10,"Overall, which system would you prefer to use for this task, and why?",workflow,1
+10,"Overall, which system would you prefer to use for this task, and why?",user,1
+10,"Overall, which system would you prefer to use for this task, and why?",friendly,1
+10,"Overall, which system would you prefer to use for this task, and why?",either,1
+10,"Overall, which system would you prefer to use for this task, and why?",fine,1
+11,What would you change or improve in MOVis?,change,3
+11,What would you change or improve in MOVis?,know,3
+11,What would you change or improve in MOVis?,buttons,3
+11,What would you change or improve in MOVis?,entire,2
+11,What would you change or improve in MOVis?,highlighted,2
+11,What would you change or improve in MOVis?,better,2
+11,What would you change or improve in MOVis?,make,2
+11,What would you change or improve in MOVis?,nothing,2
+11,What would you change or improve in MOVis?,color,2
+11,What would you change or improve in MOVis?,ability,2
+11,What would you change or improve in MOVis?,deletions,2
+11,What would you change or improve in MOVis?,UI,2
+11,What would you change or improve in MOVis?,giving,1
+11,What would you change or improve in MOVis?,src,1
+11,What would you change or improve in MOVis?,file,1
+11,What would you change or improve in MOVis?,changes,1
+11,What would you change or improve in MOVis?,instead,1
+11,What would you change or improve in MOVis?,individual,1
+11,What would you change or improve in MOVis?,hunks,1
+11,What would you change or improve in MOVis?,exactly,1
+11,What would you change or improve in MOVis?,search,1
+11,What would you change or improve in MOVis?,PR,1
+11,What would you change or improve in MOVis?,numbers,1
+11,What would you change or improve in MOVis?,hotkeys,1
+11,What would you change or improve in MOVis?,type,1
+11,What would you change or improve in MOVis?,number,1
+11,What would you change or improve in MOVis?,besides,1
+11,What would you change or improve in MOVis?,accuracy,1
+11,What would you change or improve in MOVis?,user,1
+11,What would you change or improve in MOVis?,side,1
+11,What would you change or improve in MOVis?,mean,1
+11,What would you change or improve in MOVis?,already,1
+11,What would you change or improve in MOVis?,good,1
+11,What would you change or improve in MOVis?,enough,1
+11,What would you change or improve in MOVis?,convenient,1
+11,What would you change or improve in MOVis?,assemble,1
+11,What would you change or improve in MOVis?,link,1
+11,What would you change or improve in MOVis?,GitHub,1
+11,What would you change or improve in MOVis?,source,1
+11,What would you change or improve in MOVis?,target,1
+11,What would you change or improve in MOVis?,nice,1
+11,What would you change or improve in MOVis?,wanted,1
+11,What would you change or improve in MOVis?,due,1
+11,What would you change or improve in MOVis?,diligence,1
+11,What would you change or improve in MOVis?,top,1
+11,What would you change or improve in MOVis?,head,1
+11,What would you change or improve in MOVis?,now,1
+11,What would you change or improve in MOVis?,see,1
+11,What would you change or improve in MOVis?,integrates,1
+11,What would you change or improve in MOVis?,ide,1
+11,What would you change or improve in MOVis?,tools,1
+11,What would you change or improve in MOVis?,visual,1
+11,What would you change or improve in MOVis?,studio,1
+11,What would you change or improve in MOVis?,code,1
+11,What would you change or improve in MOVis?,coding,1
+11,What would you change or improve in MOVis?,copy,1
+11,What would you change or improve in MOVis?,hunk,1
+11,What would you change or improve in MOVis?,additions,1
+11,What would you change or improve in MOVis?,addition,1
+11,What would you change or improve in MOVis?,together,1
+11,What would you change or improve in MOVis?,find,1
+11,What would you change or improve in MOVis?,option,1
+11,What would you change or improve in MOVis?,MOVis,1
+11,What would you change or improve in MOVis?,def,1
+11,What would you change or improve in MOVis?,add,1
+11,What would you change or improve in MOVis?,naming,1
+11,What would you change or improve in MOVis?,conventions,1
+11,What would you change or improve in MOVis?,preference,1
+11,What would you change or improve in MOVis?,seemed,1
+11,What would you change or improve in MOVis?,straightforward,1
+11,What would you change or improve in MOVis?,although,1
+11,What would you change or improve in MOVis?,explore,1
+11,What would you change or improve in MOVis?,tool,1
+11,What would you change or improve in MOVis?,default,1
+11,What would you change or improve in MOVis?,settings,1

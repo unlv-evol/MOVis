@@ -1,0 +1,249 @@
+{
+    "statistics": {
+        "formats": {
+            "scala": {
+                "clones": 6,
+                "duplicatedLines": 20,
+                "duplicatedTokens": 150,
+                "lines": 256,
+                "newClones": 0,
+                "newDuplicatedLines": 0,
+                "percentage": 7.8125,
+                "percentageTokens": 6.323777403035413,
+                "sources": 3,
+                "tokens": 2372
+            }
+        },
+        "detectionDate": "2026-09-24T19:35:24.647Z",
+        "total": {
+            "clones": 6,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 150,
+            "lines": 256,
+            "newClones": 0,
+            "newDuplicatedLines": 0,
+            "percentage": 7.8125,
+            "percentageTokens": 6.323777403035413,
+            "sources": 3,
+            "tokens": 2372
+        }
+    },
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 20,
+                "end": 24,
+                "startLoc": {
+                    "line": 20,
+                    "column": 0,
+                    "position": 834
+                },
+                "endLoc": {
+                    "line": 24,
+                    "column": 31,
+                    "position": 975
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 1,
+                "end": 4,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 4,
+                    "column": 32,
+                    "position": 144
+                }
+            },
+            "format": "scala",
+            "fragment": "import java.util\nimport java.util.concurrent.atomic.AtomicReference\nimport java.util.{Collections, Optional}\n\nimport org.apache.kafka.common.{Endpoint, Uuid}",
+            "lines": 5,
+            "tokens": 33
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 24,
+                "end": 25,
+                "startLoc": {
+                    "line": 24,
+                    "column": 0,
+                    "position": 944
+                },
+                "endLoc": {
+                    "line": 25,
+                    "column": 24,
+                    "position": 1016
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 6,
+                "end": 7,
+                "startLoc": {
+                    "line": 6,
+                    "column": 1,
+                    "position": 204
+                },
+                "endLoc": {
+                    "line": 7,
+                    "column": 25,
+                    "position": 277
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.apache.kafka.common.{Endpoint, Uuid}\nimport org.apache.kafka.common.metadata.{PartitionChangeRecord, PartitionRecord, RegisterBrokerRecord, TopicRecord}",
+            "lines": 2,
+            "tokens": 21
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 26,
+                "end": 27,
+                "startLoc": {
+                    "line": 26,
+                    "column": 0,
+                    "position": 1108
+                },
+                "endLoc": {
+                    "line": 27,
+                    "column": 24,
+                    "position": 1174
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 5,
+                "end": 6,
+                "startLoc": {
+                    "line": 5,
+                    "column": 1,
+                    "position": 161
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 25,
+                    "position": 228
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.apache.kafka.common.utils.Time\nimport org.apache.kafka.image.{MetadataDelta, MetadataImage}",
+            "lines": 2,
+            "tokens": 19
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 27,
+                "end": 29,
+                "startLoc": {
+                    "line": 27,
+                    "column": 0,
+                    "position": 1150
+                },
+                "endLoc": {
+                    "line": 29,
+                    "column": 11,
+                    "position": 1307
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 7,
+                "end": 9,
+                "startLoc": {
+                    "line": 7,
+                    "column": 1,
+                    "position": 253
+                },
+                "endLoc": {
+                    "line": 9,
+                    "column": 12,
+                    "position": 412
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.apache.kafka.image.{MetadataDelta, MetadataImage}\nimport org.apache.kafka.metadata.{BrokerRegistration, RecordTestUtils, VersionRange}\nimport org.apache.kafka.server.common.ApiMessageAndVersion",
+            "lines": 3,
+            "tokens": 33
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 30,
+                "end": 37,
+                "startLoc": {
+                    "line": 30,
+                    "column": 65,
+                    "position": 1420
+                },
+                "endLoc": {
+                    "line": 37,
+                    "column": 25,
+                    "position": 1566
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_context.scala",
+                "start": 8,
+                "end": 10,
+                "startLoc": {
+                    "line": 8,
+                    "column": 84,
+                    "position": 398
+                },
+                "endLoc": {
+                    "line": 10,
+                    "column": 34,
+                    "position": 502
+                }
+            },
+            "format": "scala",
+            "fragment": "import org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}\nimport org.junit.jupiter.api.Test\n\nimport scala.jdk.CollectionConverters._\n\nclass BrokerMetadataListenerTest {\n  @Test\n  def testCreateAndClose(): Unit = {",
+            "lines": 8,
+            "tokens": 27
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataListenerTest.scala",
+                "start": 202,
+                "end": 207,
+                "startLoc": {
+                    "line": 202,
+                    "column": 4,
+                    "position": 8160
+                },
+                "endLoc": {
+                    "line": 207,
+                    "column": 29,
+                    "position": 8265
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_context.scala",
+                "start": 1,
+                "end": 6,
+                "startLoc": {
+                    "line": 1,
+                    "column": 5,
+                    "position": 5
+                },
+                "endLoc": {
+                    "line": 6,
+                    "column": 30,
+                    "position": 115
+                }
+            },
+            "format": "scala",
+            "fragment": "    }\n  }\n\n  private def registerBrokers(\n    listener: BrokerMetadataListener,\n    brokerIds: Iterable[Int],",
+            "lines": 6,
+            "tokens": 17
+        }
+    ]
+}

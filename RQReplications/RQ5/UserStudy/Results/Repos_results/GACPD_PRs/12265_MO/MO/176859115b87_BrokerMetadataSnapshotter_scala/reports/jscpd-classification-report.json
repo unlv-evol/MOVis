@@ -1,0 +1,77 @@
+{
+    "moviPerHunkThresholdSelection": true,
+    "duplicates": [
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotter.scala",
+                "start": 57,
+                "end": 60,
+                "startLoc": {
+                    "line": 57,
+                    "column": 34,
+                    "position": 2143
+                },
+                "endLoc": {
+                    "line": 60,
+                    "column": 39,
+                    "position": 2333
+                }
+            },
+            "secondFile": {
+                "name": "hunk_2_deletions.scala",
+                "start": 3,
+                "end": 5,
+                "startLoc": {
+                    "line": 3,
+                    "column": 35,
+                    "position": 127
+                },
+                "endLoc": {
+                    "line": 5,
+                    "column": 40,
+                    "position": 284
+                }
+            },
+            "format": "scala",
+            "fragment": "                                  lastContainedLogTime: Long,\n                                  image: MetadataImage): Boolean = synchronized {\n    if (_currentSnapshotOffset == -1L) {\n      val writer = writerBuilder.build(committedOffset, committedEpoch, lastContainedLogTime)",
+            "lines": 4,
+            "tokens": 30
+        },
+        {
+            "firstFile": {
+                "name": "BrokerMetadataSnapshotter.scala",
+                "start": 29,
+                "end": 35,
+                "startLoc": {
+                    "line": 29,
+                    "column": 0,
+                    "position": 1185
+                },
+                "endLoc": {
+                    "line": 35,
+                    "column": 32,
+                    "position": 1396
+                }
+            },
+            "secondFile": {
+                "name": "hunk_1_deletions.scala",
+                "start": 1,
+                "end": 7,
+                "startLoc": {
+                    "line": 1,
+                    "column": 1,
+                    "position": 1
+                },
+                "endLoc": {
+                    "line": 7,
+                    "column": 33,
+                    "position": 217
+                }
+            },
+            "format": "scala",
+            "fragment": "trait SnapshotWriterBuilder {\n  def build(committedOffset: Long,\n            committedEpoch: Int,\n            lastContainedLogTime: Long): SnapshotWriter[ApiMessageAndVersion]\n}\n\nclass BrokerMetadataSnapshotter(",
+            "lines": 7,
+            "tokens": 27
+        }
+    ]
+}
